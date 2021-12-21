@@ -1,0 +1,23 @@
+﻿<Application x:Class="TheBestProjectInTheWorld.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TheBestProjectInTheWorld"
+             xmlns:viewModel="clr-namespace:TheBestProjectInTheWorld.MVVM.ViewModel"
+             xmlns:view="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:AuthViewModel}">
+                <view:PageAuth/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AddDriverViewModel}">
+                <view:AddDriverView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
