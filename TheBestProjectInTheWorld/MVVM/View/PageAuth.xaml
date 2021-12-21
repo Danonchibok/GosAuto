@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View" xmlns:viewmodel="clr-namespace:TheBestProjectInTheWorld.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:AuthViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1100"
-             Background="#253659">
+             Background="Red"
+             >
+             <!--Background="#253659"-->
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
         <Border Height="600" 
                 Width="800"
