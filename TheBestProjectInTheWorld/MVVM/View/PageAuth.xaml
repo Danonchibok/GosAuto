@@ -59,7 +59,12 @@
                         Background="White"
                         Content="ВОЙТИ"
                         FontSize="24"
-                        Command="{Binding LoginCommand}"/>
+                        Command="{Binding LoginCommand}"
+                        IsEnabled="{Binding CanLogin}"/>
+                <TextBlock Grid.Row="3"
+                           Margin="0 130 0 0"
+                           Text="{Binding Message}"
+                    ></TextBlock>
             </Grid>
         </Border>
     </StackPanel>

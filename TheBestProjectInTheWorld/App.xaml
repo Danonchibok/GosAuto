@@ -18,6 +18,7 @@
             <DataTemplate DataType="{x:Type viewModel:AddDriverViewModel}">
                 <view:AddDriverView/>
             </DataTemplate>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
