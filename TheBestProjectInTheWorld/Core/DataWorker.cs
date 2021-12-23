@@ -28,5 +28,37 @@ namespace TheBestProjectInTheWorld.Core
             AutoContext.GetContext().Drivers.Add(driver);
             return message;
         }
+
+        public static string EditDriver(Drivers driver, string name, string middleName, int passSerial, int passNum, int postCode,
+            string addres, string phone, string email)
+        {
+            string message = "Данные обновлены";
+            driver.name = name;
+            driver.middlename = middleName;
+            driver.passportSerial = passSerial;
+            driver.passportNumber = passNum;
+            driver.postcode = postCode;
+            driver.address = addres;
+            driver.phone = phone;
+            driver.email = email;
+            AutoContext.GetContext().SaveChanges();
+            return message;
+        }
+
+        public static string AddNewCar(Cars newCar)
+        {
+            string message = "Добавлено";
+            List<Cars> cars = AutoContext.GetContext().Cars.Where(c => c.VIN == newCar.VIN).ToList();
+            if (cars.Count > 0)
+            {
+                message = "Есть такая!";
+            }
+            else
+            {
+                AutoContext.GetContext().Cars.Add(newCar);
+                AutoContext.GetContext().SaveChanges();
+            }
+            return message;
+        }
     }
 }

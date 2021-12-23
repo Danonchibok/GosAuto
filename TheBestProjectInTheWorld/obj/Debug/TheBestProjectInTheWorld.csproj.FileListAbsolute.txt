@@ -55,7 +55,6 @@ E:\GosAuto\TheBestProjectInTheWorld\bin\Debug\ru\EntityFramework.resources.dll
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.csproj.AssemblyReference.cache
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.csproj.SuggestedBindingRedirects.cache
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MainWindow.g.cs
-E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\AddDriverView.g.cs
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\PageAuth.g.cs
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\App.g.cs
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld_Content.g.cs
@@ -64,9 +63,7 @@ E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld_MarkupCom
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld_MarkupCompile.lref
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\App.baml
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MainWindow.baml
-E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\AddDriverView.baml
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\PageAuth.baml
-E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\Style.baml
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.g.resources
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.Properties.Resources.resources
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.csproj.GenerateResource.cache
@@ -109,3 +106,53 @@ C:\Users\usersql\Desktop\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBest
 C:\Users\usersql\Desktop\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.csproj.CopyComplete
 C:\Users\usersql\Desktop\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.exe
 C:\Users\usersql\Desktop\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.pdb
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\TheBestProjectInTheWorld.exe.config
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\TheBestProjectInTheWorld.exe
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\TheBestProjectInTheWorld.pdb
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\EntityFramework.dll
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\EntityFramework.SqlServer.dll
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\Newtonsoft.Json.dll
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\EntityFramework.xml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\EntityFramework.SqlServer.xml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\Newtonsoft.Json.xml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\ru\EntityFramework.resources.dll
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.csproj.AssemblyReference.cache
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\Theme\onCreateDriversPage.baml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\Theme\OnMainPage.baml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MainWindow.g.cs
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateDrivers.g.cs
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DriverCard.g.cs
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\PageAuth.g.cs
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingCardDrivers.g.cs
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingDrivers.g.cs
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\App.g.cs
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld_Content.g.cs
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld_MarkupCompile.cache
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld_MarkupCompile.lref
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\App.baml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MainWindow.baml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateDrivers.baml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DriverCard.baml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\PageAuth.baml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingCardDrivers.baml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingDrivers.baml
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.g.resources
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.Properties.Resources.resources
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.csproj.GenerateResource.cache
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.csproj.CoreCompileInputs.cache
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.exe
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.pdb
+D:\Download\GosAuto-main (1)\GosAuto-main\TheBestProjectInTheWorld\obj\Debug\Theme\OnAuthPage.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\onCreateDriversPage.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\OnMainPage.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateDrivers.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DriverCard.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingCardDrivers.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingDrivers.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateDrivers.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DriverCard.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingCardDrivers.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingDrivers.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\OnAuthPage.baml

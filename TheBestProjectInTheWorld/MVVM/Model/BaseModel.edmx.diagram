@@ -4,16 +4,38 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e8718a0c50d14695a971a322c4348d2f" Name="Diagram1">
-        <EntityTypeShape EntityType="GosAutoModel.Companies" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GosAutoModel.Drivers" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GosAutoModel.Employees" Width="1.5" PointX="8" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="GosAutoModel.Jobs" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GosAutoModel.Positions" Width="1.5" PointX="5.75" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GosAutoModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.25" IsExpanded="true" />
+      <Diagram DiagramId="907e25f1fa694f899a78b855c1025775" Name="Diagram1">
+        <EntityTypeShape EntityType="GosAutoModel.Cars" Width="1.5" PointX="7.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.ChangedDriversHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.ChangedStatusHistory" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Companies" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Drivers" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Employees" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.EngineTypes" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Jobs" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Licences" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Manufacturers" Width="1.5" PointX="5.25" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Models" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Positions" Width="1.5" PointX="7.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Statuses" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.TypeDrives" Width="1.5" PointX="5.25" PointY="20.25" IsExpanded="true" />
+        <AssociationConnector Association="GosAutoModel.FK_Cars_Drivers" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_Cars_EngineTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_Cars_Manufacturers" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_Cars_Models" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_Cars_TypeDrives" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_ChangedStatusHistory_Licences" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_ChangedStatusHistory_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_ChangedStatusHistory_Statuses1" ManuallyRouted="false" />
         <AssociationConnector Association="GosAutoModel.FK_Drivers_Companies" ManuallyRouted="false" />
         <AssociationConnector Association="GosAutoModel.FK_Drivers_Jobs" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_Drivers_Licences" ManuallyRouted="false" />
         <AssociationConnector Association="GosAutoModel.FK_Employees_Positions" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_Licences_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_ChangedDriversHistory_Cars" />
+        <AssociationConnector Association="GosAutoModel.FK_ChangedDriversHistory_Drivers" />
+        <AssociationConnector Association="GosAutoModel.FK_ChangedDriversHistory_Drivers1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1,5 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Хранилище GosAutoModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VIN" Type="nvarchar" MaxLength="255" />
+    <Property Name="Year" Type="float" />
+    <Property Name="Weight" Type="int" />
+    <Property Name="Color" Type="int" />
+    <Property Name="EngineId" Type="int" />
+    <Property Name="ManufaturerId" Type="int" />
+    <Property Name="TypeId" Type="int" />
+    <Property Name="ModelId" Type="int" />
+    <Property Name="DriverId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChangedDriversHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="changedFromDriversId" Type="int" Nullable="false" />
+    <Property Name="changedToDriversId" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="carId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChangedStatusHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="licencId" Type="int" Nullable="false" />
+    <Property Name="changedFromStatusID" Type="int" Nullable="false" />
+    <Property Name="changedToStatusId" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
   <EntityType Name="Drivers">
     <Key>
       <PropertyRef Name="id" />
@@ -7,17 +49,18 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="255" />
     <Property Name="middlename" Type="nvarchar" MaxLength="255" />
-    <Property Name="passport serial" Type="nvarchar" MaxLength="255" />
-    <Property Name="passport number" Type="nvarchar" MaxLength="255" />
-    <Property Name="postcode" Type="float" />
+    <Property Name="passportSerial" Type="int" />
+    <Property Name="passportNumber" Type="int" />
+    <Property Name="postcode" Type="int" />
     <Property Name="address" Type="nvarchar" MaxLength="255" />
-    <Property Name="address life" Type="nvarchar" MaxLength="255" />
-    <Property Name="company" Type="nvarchar" MaxLength="255" />
-    <Property Name="jobname" Type="nvarchar" MaxLength="255" />
+    <Property Name="addressLife" Type="nvarchar" MaxLength="255" />
     <Property Name="phone" Type="nvarchar" MaxLength="255" />
     <Property Name="email" Type="nvarchar" MaxLength="255" />
     <Property Name="photo" Type="nvarchar" MaxLength="255" />
     <Property Name="description" Type="nvarchar" MaxLength="255" />
+    <Property Name="companyId" Type="int" />
+    <Property Name="jobId" Type="int" />
+    <Property Name="licenceId" Type="int" />
   </EntityType>
   <EntityType Name="Employees">
     <Key>
@@ -29,12 +72,59 @@
     <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="positionId" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="EngineTypes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EngineType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Jobs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobname" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Licences">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="licenceDate" Type="datetime" />
+    <Property Name="expireDate" Type="datetime" />
+    <Property Name="categories" Type="nvarchar" MaxLength="255" />
+    <Property Name="licenceSeries" Type="nvarchar" MaxLength="255" />
+    <Property Name="licenceNumber" Type="int" />
+    <Property Name="StatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="Manufacturers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Models">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="255" />
+  </EntityType>
   <EntityType Name="Positions">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Statuses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -46,6 +136,181 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
+  <EntityType Name="TypeDrives">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type of drive" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK_Cars_Drivers">
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="1" />
+    <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="DriverId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cars_EngineTypes">
+    <End Role="EngineTypes" Type="Self.EngineTypes" Multiplicity="0..1" />
+    <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EngineTypes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="EngineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cars_Manufacturers">
+    <End Role="Manufacturers" Type="Self.Manufacturers" Multiplicity="0..1" />
+    <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="ManufaturerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cars_Models">
+    <End Role="Models" Type="Self.Models" Multiplicity="0..1" />
+    <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Models">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cars_TypeDrives">
+    <End Role="TypeDrives" Type="Self.TypeDrives" Multiplicity="0..1" />
+    <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeDrives">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangedDriversHistory_Cars">
+    <End Role="Cars" Type="Self.Cars" Multiplicity="1" />
+    <End Role="ChangedDriversHistory" Type="Self.ChangedDriversHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cars">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangedDriversHistory">
+        <PropertyRef Name="carId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangedDriversHistory_Drivers">
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="1" />
+    <End Role="ChangedDriversHistory" Type="Self.ChangedDriversHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangedDriversHistory">
+        <PropertyRef Name="changedFromDriversId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangedDriversHistory_Drivers1">
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="1" />
+    <End Role="ChangedDriversHistory" Type="Self.ChangedDriversHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangedDriversHistory">
+        <PropertyRef Name="changedToDriversId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangedStatusHistory_Licences">
+    <End Role="Licences" Type="Self.Licences" Multiplicity="1" />
+    <End Role="ChangedStatusHistory" Type="Self.ChangedStatusHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Licences">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangedStatusHistory">
+        <PropertyRef Name="licencId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangedStatusHistory_Statuses">
+    <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+    <End Role="ChangedStatusHistory" Type="Self.ChangedStatusHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statuses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangedStatusHistory">
+        <PropertyRef Name="changedFromStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangedStatusHistory_Statuses1">
+    <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+    <End Role="ChangedStatusHistory" Type="Self.ChangedStatusHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statuses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangedStatusHistory">
+        <PropertyRef Name="changedToStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Drivers_Companies">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="0..1" />
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Drivers">
+        <PropertyRef Name="companyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Drivers_Jobs">
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="0..1" />
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Drivers">
+        <PropertyRef Name="jobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Drivers_Licences">
+    <End Role="Licences" Type="Self.Licences" Multiplicity="0..1" />
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Licences">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Drivers">
+        <PropertyRef Name="licenceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Employees_Positions">
     <End Role="Positions" Type="Self.Positions" Multiplicity="1" />
     <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
@@ -58,14 +323,97 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Licences_Statuses">
+    <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
+    <End Role="Licences" Type="Self.Licences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statuses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Licences">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Хранилище GosAutoModelContainer">
+    <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChangedDriversHistory" EntityType="Self.ChangedDriversHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChangedStatusHistory" EntityType="Self.ChangedStatusHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Drivers" EntityType="Self.Drivers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EngineTypes" EntityType="Self.EngineTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Licences" EntityType="Self.Licences" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manufacturers" EntityType="Self.Manufacturers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Models" EntityType="Self.Models" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Positions" EntityType="Self.Positions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Statuses" EntityType="Self.Statuses" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeDrives" EntityType="Self.TypeDrives" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Cars_Drivers" Association="Self.FK_Cars_Drivers">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cars_EngineTypes" Association="Self.FK_Cars_EngineTypes">
+      <End Role="EngineTypes" EntitySet="EngineTypes" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cars_Manufacturers" Association="Self.FK_Cars_Manufacturers">
+      <End Role="Manufacturers" EntitySet="Manufacturers" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cars_Models" Association="Self.FK_Cars_Models">
+      <End Role="Models" EntitySet="Models" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cars_TypeDrives" Association="Self.FK_Cars_TypeDrives">
+      <End Role="TypeDrives" EntitySet="TypeDrives" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangedDriversHistory_Cars" Association="Self.FK_ChangedDriversHistory_Cars">
+      <End Role="Cars" EntitySet="Cars" />
+      <End Role="ChangedDriversHistory" EntitySet="ChangedDriversHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangedDriversHistory_Drivers" Association="Self.FK_ChangedDriversHistory_Drivers">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="ChangedDriversHistory" EntitySet="ChangedDriversHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangedDriversHistory_Drivers1" Association="Self.FK_ChangedDriversHistory_Drivers1">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="ChangedDriversHistory" EntitySet="ChangedDriversHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangedStatusHistory_Licences" Association="Self.FK_ChangedStatusHistory_Licences">
+      <End Role="Licences" EntitySet="Licences" />
+      <End Role="ChangedStatusHistory" EntitySet="ChangedStatusHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangedStatusHistory_Statuses" Association="Self.FK_ChangedStatusHistory_Statuses">
+      <End Role="Statuses" EntitySet="Statuses" />
+      <End Role="ChangedStatusHistory" EntitySet="ChangedStatusHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangedStatusHistory_Statuses1" Association="Self.FK_ChangedStatusHistory_Statuses1">
+      <End Role="Statuses" EntitySet="Statuses" />
+      <End Role="ChangedStatusHistory" EntitySet="ChangedStatusHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Drivers_Companies" Association="Self.FK_Drivers_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Drivers" EntitySet="Drivers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Drivers_Jobs" Association="Self.FK_Drivers_Jobs">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="Drivers" EntitySet="Drivers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Drivers_Licences" Association="Self.FK_Drivers_Licences">
+      <End Role="Licences" EntitySet="Licences" />
+      <End Role="Drivers" EntitySet="Drivers" />
+    </AssociationSet>
     <AssociationSet Name="FK_Employees_Positions" Association="Self.FK_Employees_Positions">
       <End Role="Positions" EntitySet="Positions" />
       <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Licences_Statuses" Association="Self.FK_Licences_Statuses">
+      <End Role="Statuses" EntitySet="Statuses" />
+      <End Role="Licences" EntitySet="Licences" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

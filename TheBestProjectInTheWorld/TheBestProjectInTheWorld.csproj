@@ -85,7 +85,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MVVM\View\AddDriverView.xaml">
+    <Page Include="MVVM\View\CreateDrivers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\DriverCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -93,7 +97,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Theme\Style.xaml">
+    <Page Include="MVVM\View\WatchingCardDrivers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\WatchingDrivers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\OnAuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\onCreateDriversPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\OnMainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,6 +134,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\Model\Cars.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Model\ChangedDriversHistory.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Model\ChangedStatusHistory.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\Model\Companies.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
@@ -123,23 +152,53 @@
     <Compile Include="MVVM\Model\Employees.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\Model\EngineTypes.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\Model\Jobs.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Model\Licences.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Model\Manufacturers.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Model\Models.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MVVM\Model\Positions.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\Model\Statuses.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\Model\sysdiagrams.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\Model\TypeDrives.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\ViewModel\AddDriverViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\AddNewCar.cs" />
+    <Compile Include="MVVM\ViewModel\AddNewLicence.cs" />
     <Compile Include="MVVM\ViewModel\AuthViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\DriversListViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
-    <Compile Include="MVVM\View\AddDriverView.xaml.cs">
-      <DependentUpon>AddDriverView.xaml</DependentUpon>
+    <Compile Include="MVVM\View\CreateDrivers.xaml.cs">
+      <DependentUpon>CreateDrivers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\DriverCard.xaml.cs">
+      <DependentUpon>DriverCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\PageAuth.xaml.cs">
       <DependentUpon>PageAuth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\WatchingCardDrivers.xaml.cs">
+      <DependentUpon>WatchingCardDrivers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\WatchingDrivers.xaml.cs">
+      <DependentUpon>WatchingDrivers.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -184,6 +243,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\image 3.png" />
     <Content Include="MVVM\Model\BaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BaseModel.edmx</DependentUpon>

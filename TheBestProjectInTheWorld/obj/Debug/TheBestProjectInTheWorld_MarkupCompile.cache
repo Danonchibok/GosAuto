@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\GosAuto\TheBestProjectInTheWorld\App.xaml
-4-1384523538
+9600669815
 2-1410150825
-25632678015
+391191418855
 191573603545
-MainWindow.xaml;MVVM\View\AddDriverView.xaml;MVVM\View\PageAuth.xaml;Theme\Style.xaml;
+MainWindow.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\DriverCard.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingCardDrivers.xaml;MVVM\View\WatchingDrivers.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;
 
-True
+False
 

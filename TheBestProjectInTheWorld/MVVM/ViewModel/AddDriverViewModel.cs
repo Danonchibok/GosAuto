@@ -125,6 +125,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         }
         public RelayCommand AddCommand { get; set; }
 
+
         public AddDriverViewModel()
         {
             AddCommand = new RelayCommand(o =>
@@ -133,8 +134,8 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 {
                     name = Name,
                     middlename = MiddleName,
-                    passport_serial = PassportSerial,
-                    passport_number = PassportNum,
+                    passportSerial = PassportSerial,
+                    passportNumber = PassportNum,
                     postcode = PostCode,
                     address = Address,
                     phone = Phone,
@@ -152,6 +153,23 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 };
 
                 Message = DataWorker.AddNewDriver(driver, company, job);
+            });
+        }
+
+        public AddDriverViewModel(Drivers driver)
+        {
+            Name = driver.name;
+            MiddleName = driver.middlename;
+            PassportSerial = (int)driver.passportSerial;
+            PassportNum = (int)driver.passportNumber;
+            PostCode = (int)driver.postcode;
+            Address = driver.address;
+            Phone = driver.phone;
+            Email = driver.email;
+
+            AddCommand = new RelayCommand(o => 
+            {
+                Message = DataWorker.EditDriver(driver, Name, MiddleName, PassportSerial, PassportNum, PostCode, Address, Phone, Email);
             });
         }
     }

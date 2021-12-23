@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="TheBestProjectInTheWorld.MVVM.View.CreateDrivers"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="710" d:DesignWidth="1000">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="Создание водительской карточки"
+                   FontSize="35"
+                   Foreground="White"
+                   Margin="10 0 0 10"/>
+
+        <Border Height="550"
+                Background="#1B2B4E"
+                CornerRadius="25">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border  Grid.RowSpan="5" 
+                         Grid.Column="0" 
+                         Margin="60 0 0 0"
+                         Width="120" 
+                         Height="160"
+                         BorderBrush="Gray"
+                         BorderThickness="1">
+                    <Image Source="/Images/image 3.png"/>
+                </Border>
+
+                <TextBox Grid.Row="0" Grid.Column="1"
+                     Text="Идентификатор GUID"
+                     Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="1" Grid.Column="1"
+                     Text="Фамилия"
+                       Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="2" Grid.Column="1"
+                     Text="Имя"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="3"  Grid.Column="1"
+                     Text="Отчество"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="4" Grid.Column="1"
+                     Text="Серия паспорта"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="4" Grid.Column="2"
+                          HorizontalAlignment="Left"
+                     Text="Номер паспорта"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="5" Grid.Column="1"
+                     Text="Адрес регистрации"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="5" Grid.Column="2"
+                          HorizontalAlignment="Left"
+                     Text="Адрес проживания"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="6"  Grid.Column="1"
+                     Text="Место работы"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="6"  Grid.Column="2" 
+                          HorizontalAlignment="Left"
+                     Text="Должность"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="7" Grid.Column="1"
+                     Text="Мобильный телефон"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="7"  Grid.Column="2"
+                     Text="Email"
+                         HorizontalAlignment="Left"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="8"  Grid.Column="0" Grid.ColumnSpan="3"
+                     Text="Фотография"
+                           Style="{StaticResource driversBox}"/>
+
+                <TextBox Grid.Row="9" Grid.Column="0"  Grid.ColumnSpan="3"
+                     Text="Замечания"
+                     Width="700"
+                           Style="{StaticResource driversBox}"/>
+            </Grid>
+        </Border>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="0 25 0 0">
+            <Button 
+                FontSize="16"
+                Background="White"
+                Content="НАЗАД"
+                Foreground="Black"
+                Height="50"
+                Width="480">
+            </Button>
+            <Button Margin="40 0 0 0"
+                    HorizontalAlignment="Right"
+                    Height="50"
+                    Width="480"
+                    Content="СОЗДАТЬ"
+                    FontSize="16"
+                    Background="White"
+                    Foreground="Black"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

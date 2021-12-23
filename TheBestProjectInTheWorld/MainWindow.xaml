@@ -6,16 +6,80 @@
         xmlns:local="clr-namespace:TheBestProjectInTheWorld"
         xmlns:viewModel="clr-namespace:TheBestProjectInTheWorld.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1100"
+        Title="MainWindow" Height="800" Width="1100"
         Background="#253659"
         WindowStyle="SingleBorderWindow"
         ResizeMode="NoResize">
     <Window.DataContext>
         <viewModel:MainViewModel/>
-    </Window.DataContext>    
-    <Grid>
-        <ContentControl Content="{Binding CurrentView}">
-            
-        </ContentControl>
-    </Grid>
+    </Window.DataContext>
+    <StackPanel>
+        <Grid Visibility="{Binding IsLogged, Converter={StaticResource BoolToVis}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="274"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="89"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0" Grid.ColumnSpan="3"
+                    Height="90"
+                    Background="#1B2B4E"/>
+
+            <Image Grid.Row="0" 
+                   Grid.Column="0"
+                    Source="/Images/Logo.png" 
+                    Height="56" 
+                    Width="218"/>
+
+            <RadioButton Grid.Column="1"
+                         Style="{StaticResource ButtonsInHeadersOnMainPage}" Margin="0,0,541,0"
+                         Content="ВОДИТЕЛИ"
+                         Background="Transparent"
+                         FontSize="16"
+                         BorderThickness="0"
+                         Foreground="White"
+                         Width="190"/>
+
+            <RadioButton Grid.Column="1"
+                         Content="ВУ"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         FontSize="16"
+                         Foreground="White"
+                         Width="170"
+                         Style="{StaticResource ButtonsInHeadersOnMainPage}" Margin="195,0,366,0"/>
+
+            <RadioButton Grid.Column="1"
+                         Content="ТС"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         FontSize="16"
+                         Foreground="White"
+                         Width="170"
+                         Style="{StaticResource ButtonsInHeadersOnMainPage}" Margin="370,0,191,0"/>
+
+            <RadioButton Grid.Column="1"
+                         Content="ДТП"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         FontSize="16"
+                         Foreground="White"
+                         Width="170"
+                         Style="{StaticResource ButtonsInHeadersOnMainPage}" Margin="545,0,16,0"/>
+
+            <Button Grid.Column="2" 
+                    Width="77"
+                    Content="ВЫЙТИ"
+                    FontSize="16"
+                    Foreground="White"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Command="{Binding ExitCommand}"/>
+        </Grid>
+        <ContentControl Content="{Binding CurrentView}"/>
+    </StackPanel>
 </Window>
