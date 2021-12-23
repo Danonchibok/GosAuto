@@ -61,6 +61,11 @@
                         Command="{Binding LoginCommand}"
                         IsEnabled="{Binding CanLogin}"/>
                 <TextBlock Grid.Row="3"
+                           Width="100"
+                           Foreground="White"
+                           FontSize="17"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"
                            Text="{Binding Message}"
                     ></TextBlock>
             </Grid>

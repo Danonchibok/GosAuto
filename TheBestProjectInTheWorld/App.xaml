@@ -17,8 +17,16 @@
                 <view:PageAuth/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:DriversListViewModel}">
+                <view:WatchingDrivers/>
+            </DataTemplate>
+
             <DataTemplate DataType="{x:Type viewModel:AddDriverViewModel}">
                 <view:CreateDrivers/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:LicencesListViewModel}">
+                <view:LicencesListView/>
             </DataTemplate>
             <BooleanToVisibilityConverter x:Key="BoolToVis"/>
         </ResourceDictionary>

@@ -30,15 +30,20 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 OnPropertyChanged("CurrentView");
             }
         }
-        public AuthViewModel AuthVM { get; set; }
         public RelayCommand ExitCommand { get; set; }
+        public RelayCommand DriversCommand { get; set; }
+        public RelayCommand LicencesCommand { get; set; }
+        public AuthViewModel AuthVM { get; set; }
         public AddDriverViewModel AddDriverVM { get; set; }
-
+        public DriversListViewModel DriversListVM { get; set; }
+        public LicencesListViewModel LicencesListVM{ get; set; }
         public MainViewModel()
         {
             IsLogged = false; //Потом сменить false
             AuthVM = new AuthViewModel();
             AddDriverVM = new AddDriverViewModel();
+            DriversListVM = new DriversListViewModel();
+            LicencesListVM = new LicencesListViewModel();
             curretnView = AuthVM;
 
             AuthVM.LoginEvent += AuthVM_LoginEvent;
@@ -48,10 +53,21 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 CurrentView = AuthVM;
                 IsLogged = false;
             });
+
+            DriversCommand = new RelayCommand(o =>
+            {
+                CurrentView = DriversListVM;
+            });
+
+            LicencesCommand = new RelayCommand(o =>
+            {
+                CurrentView = LicencesListVM;
+            });
         }
 
         private void AuthVM_LoginEvent(object sender, EventArgs e)
         {
+            IsLogged = true;
             CurrentView = AddDriverVM;
         }
     }
