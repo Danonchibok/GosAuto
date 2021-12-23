@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Хранилище GosAutoModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Companies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="company" Type="nvarchar" MaxLength="255" Nullable="false" />
+        </EntityType>
         <EntityType Name="Drivers">
           <Key>
             <PropertyRef Name="id" />
@@ -12,17 +19,17 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="255" />
           <Property Name="middlename" Type="nvarchar" MaxLength="255" />
-          <Property Name="passport serial" Type="nvarchar" MaxLength="255" />
-          <Property Name="passport number" Type="nvarchar" MaxLength="255" />
-          <Property Name="postcode" Type="float" />
+          <Property Name="passport serial" Type="int" />
+          <Property Name="passport number" Type="int" />
+          <Property Name="postcode" Type="int" />
           <Property Name="address" Type="nvarchar" MaxLength="255" />
           <Property Name="address life" Type="nvarchar" MaxLength="255" />
-          <Property Name="company" Type="nvarchar" MaxLength="255" />
-          <Property Name="jobname" Type="nvarchar" MaxLength="255" />
-          <Property Name="phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" />
           <Property Name="email" Type="nvarchar" MaxLength="255" />
           <Property Name="photo" Type="nvarchar" MaxLength="255" />
           <Property Name="description" Type="nvarchar" MaxLength="255" />
+          <Property Name="companyId" Type="int" Nullable="false" />
+          <Property Name="jobId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
@@ -33,6 +40,13 @@
           <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="positionId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="jobname" Type="nvarchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="Positions">
           <Key>
@@ -51,6 +65,30 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <Association Name="FK_Drivers_Companies">
+          <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+          <End Role="Drivers" Type="Self.Drivers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Drivers">
+              <PropertyRef Name="companyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Drivers_Jobs">
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
+          <End Role="Drivers" Type="Self.Drivers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Drivers">
+              <PropertyRef Name="jobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Employees_Positions">
           <End Role="Positions" Type="Self.Positions" Multiplicity="1" />
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
@@ -64,10 +102,20 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Хранилище GosAutoModelContainer">
+          <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Drivers" EntityType="Self.Drivers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Positions" EntityType="Self.Positions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Drivers_Companies" Association="Self.FK_Drivers_Companies">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="Drivers" EntitySet="Drivers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Drivers_Jobs" Association="Self.FK_Drivers_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="Drivers" EntitySet="Drivers" />
+          </AssociationSet>
           <AssociationSet Name="FK_Employees_Positions" Association="Self.FK_Employees_Positions">
             <End Role="Positions" EntitySet="Positions" />
             <End Role="Employees" EntitySet="Employees" />
@@ -78,6 +126,14 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GosAutoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Companies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="company" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Drivers" Relationship="Self.FK_Drivers_Companies" FromRole="Companies" ToRole="Drivers" />
+        </EntityType>
         <EntityType Name="Drivers">
           <Key>
             <PropertyRef Name="id" />
@@ -85,17 +141,19 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="middlename" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="passport_serial" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="passport_number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="postcode" Type="Double" />
+          <Property Name="passport_serial" Type="Int32" />
+          <Property Name="passport_number" Type="Int32" />
+          <Property Name="postcode" Type="Int32" />
           <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="address_life" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="company" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="jobname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="photo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="companyId" Type="Int32" Nullable="false" />
+          <Property Name="jobId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Companies" Relationship="Self.FK_Drivers_Companies" FromRole="Drivers" ToRole="Companies" />
+          <NavigationProperty Name="Jobs" Relationship="Self.FK_Drivers_Jobs" FromRole="Drivers" ToRole="Jobs" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
@@ -107,6 +165,14 @@
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="positionId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Positions" Relationship="Self.FK_Employees_Positions" FromRole="Employees" ToRole="Positions" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="jobname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Drivers" Relationship="Self.FK_Drivers_Jobs" FromRole="Jobs" ToRole="Drivers" />
         </EntityType>
         <EntityType Name="Positions">
           <Key>
@@ -126,6 +192,30 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <Association Name="FK_Drivers_Companies">
+          <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+          <End Role="Drivers" Type="Self.Drivers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Drivers">
+              <PropertyRef Name="companyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Drivers_Jobs">
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
+          <End Role="Drivers" Type="Self.Drivers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Drivers">
+              <PropertyRef Name="jobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Employees_Positions">
           <End Role="Positions" Type="Self.Positions" Multiplicity="1" />
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
@@ -139,10 +229,20 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="GosAutoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Companies" EntityType="Self.Companies" />
           <EntitySet Name="Drivers" EntityType="Self.Drivers" />
           <EntitySet Name="Employees" EntityType="Self.Employees" />
+          <EntitySet Name="Jobs" EntityType="Self.Jobs" />
           <EntitySet Name="Positions" EntityType="Self.Positions" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <AssociationSet Name="FK_Drivers_Companies" Association="Self.FK_Drivers_Companies">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="Drivers" EntitySet="Drivers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Drivers_Jobs" Association="Self.FK_Drivers_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="Drivers" EntitySet="Drivers" />
+          </AssociationSet>
           <AssociationSet Name="FK_Employees_Positions" Association="Self.FK_Employees_Positions">
             <End Role="Positions" EntitySet="Positions" />
             <End Role="Employees" EntitySet="Employees" />
@@ -154,6 +254,14 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Хранилище GosAutoModelContainer" CdmEntityContainer="GosAutoEntities">
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="GosAutoModel.Companies">
+              <MappingFragment StoreEntitySet="Companies">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="company" ColumnName="company" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Drivers">
             <EntityTypeMapping TypeName="GosAutoModel.Drivers">
               <MappingFragment StoreEntitySet="Drivers">
@@ -165,12 +273,12 @@
                 <ScalarProperty Name="postcode" ColumnName="postcode" />
                 <ScalarProperty Name="address" ColumnName="address" />
                 <ScalarProperty Name="address_life" ColumnName="address life" />
-                <ScalarProperty Name="company" ColumnName="company" />
-                <ScalarProperty Name="jobname" ColumnName="jobname" />
                 <ScalarProperty Name="phone" ColumnName="phone" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="photo" ColumnName="photo" />
                 <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="companyId" ColumnName="companyId" />
+                <ScalarProperty Name="jobId" ColumnName="jobId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -182,6 +290,14 @@
                 <ScalarProperty Name="login" ColumnName="login" />
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="positionId" ColumnName="positionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="GosAutoModel.Jobs">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="jobname" ColumnName="jobname" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

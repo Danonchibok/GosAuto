@@ -12,24 +12,18 @@ namespace TheBestProjectInTheWorld.MVVM.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Drivers
+    public partial class Jobs
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string middlename { get; set; }
-        public Nullable<int> passport_serial { get; set; }
-        public Nullable<int> passport_number { get; set; }
-        public Nullable<int> postcode { get; set; }
-        public string address { get; set; }
-        public string address_life { get; set; }
-        public string phone { get; set; }
-        public string email { get; set; }
-        public string photo { get; set; }
-        public string description { get; set; }
-        public int companyId { get; set; }
-        public int jobId { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Jobs()
+        {
+            this.Drivers = new HashSet<Drivers>();
+        }
     
-        public virtual Companies Companies { get; set; }
-        public virtual Jobs Jobs { get; set; }
+        public int id { get; set; }
+        public string jobname { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Drivers> Drivers { get; set; }
     }
 }

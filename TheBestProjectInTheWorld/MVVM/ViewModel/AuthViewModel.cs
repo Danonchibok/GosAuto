@@ -63,32 +63,44 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         public AuthViewModel()
         {
 
+            int sec = Serializer.GetTimeInSeconds();
+            if (sec != 60)
+            {
+                SetLoginFalse(sec);
+            }
+
             LoginCommand = new RelayCommand(o =>
             {
-                //List<Employees> employees = AutoContext.GetContext().Employees.Where(e => e.login == Login).ToList();
-                //employees = employees.Where(e => e.password == Password).ToList();
-                //if (employees.Count > 0)
-                //{
-                //    LoginEvent(this, new EventArgs());
-
-                //}
-                if (Login == "Log" && Password == "Log")
+                List<Employees> employees = AutoContext.GetContext().Employees.Where(e => e.login == Login).ToList();
+                employees = employees.Where(e => e.password == Password).ToList();
+                if (employees.Count > 0)
                 {
                     LoginEvent(this, new EventArgs());
+
                 }
+                //if (Login == "Log" && Password == "Log")
+                //{
+                //    LoginEvent(this, new EventArgs());
+                //}
                 else
                 {
                     attempts++;
                     Message = "Неправильно";
                     if (attempts > 3)
                     {
-                        CanLogin = false;
-                        timer.Interval = new TimeSpan(0,0,1);
-                        timer.Tick += Timer_Tick;
-                        timer.Start();
+                        SetLoginFalse(60);
                     }
                 }
             });
+
+            App.Current.Exit += Current_Exit;
+            timer.Tick += Timer_Tick;
+
+        }
+
+        private void Current_Exit(object sender, System.Windows.ExitEventArgs e)
+        {
+            Serializer.SetTimeInSeconds(seconds);
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -97,11 +109,27 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             Message = $"Осталось {seconds}";
             if (seconds < 1)
             {
-                timer.Stop();
-                seconds = 60;
-                Message = "";
-                CanLogin = true;
+                SetLoginTrue();
             }
+        }
+
+        private void SetLoginTrue()
+        {
+            
+            timer.Stop();
+            seconds = 60;
+            Message = "";
+            CanLogin = true;
+            Serializer.SetTimeInSeconds(60);
+        }
+
+        private void SetLoginFalse(int waitTime)
+        {
+            seconds = waitTime;
+            CanLogin = false;
+            timer.Interval = new TimeSpan(0, 0, 1);
+
+            timer.Start();
         }
     }
 }

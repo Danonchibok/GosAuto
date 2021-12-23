@@ -4,11 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="735a4173a81041c0a4b4b4a9ec8f1af1" Name="Diagram1">
-        <EntityTypeShape EntityType="GosAutoModel.Drivers" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GosAutoModel.Employees" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="GosAutoModel.Positions" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="GosAutoModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+      <Diagram DiagramId="e8718a0c50d14695a971a322c4348d2f" Name="Diagram1">
+        <EntityTypeShape EntityType="GosAutoModel.Companies" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Drivers" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Employees" Width="1.5" PointX="8" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Jobs" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.Positions" Width="1.5" PointX="5.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GosAutoModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="GosAutoModel.FK_Drivers_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="GosAutoModel.FK_Drivers_Jobs" ManuallyRouted="false" />
         <AssociationConnector Association="GosAutoModel.FK_Employees_Positions" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

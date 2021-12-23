@@ -25,8 +25,10 @@ namespace TheBestProjectInTheWorld.MVVM.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Companies> Companies { get; set; }
         public virtual DbSet<Drivers> Drivers { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
+        public virtual DbSet<Jobs> Jobs { get; set; }
         public virtual DbSet<Positions> Positions { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }

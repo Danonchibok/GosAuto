@@ -12,15 +12,15 @@ namespace TheBestProjectInTheWorld.Core
     {
         public static int GetTimeInSeconds()
         {
-            int time = JsonConvert.DeserializeObject<int>(File.ReadAllText(Environment.CurrentDirectory + "time.json"));
+            int time = JsonConvert.DeserializeObject<int>(File.ReadAllText(Environment.CurrentDirectory + "\\time.json"));
             return time;
         }
 
-        public static async void SetTimeInSeconds(int time)
+        public static void SetTimeInSeconds(int time)
         {
             string json = JsonConvert.SerializeObject(time);
-            string path = Environment.CurrentDirectory + "time.json";
-            await Task.Run(() => File.WriteAllText(path, json));
+            string path = Environment.CurrentDirectory + "\\time.json";
+            File.WriteAllText(path, json);
         }
     }
 }

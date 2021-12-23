@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TheBestProjectInTheWorld.Core;
+using TheBestProjectInTheWorld.MVVM.Model;
 
 namespace TheBestProjectInTheWorld.MVVM.ViewModel
 {
     class AddDriverViewModel : ObservableObject
     {
+        private string message;
         private string name;
         private string middleName;
         private int passportSerial;
@@ -20,7 +22,6 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         private string phone;
         private string email;
         private string photo;
-        private string desription;
 
         public string Name
         {
@@ -112,21 +113,46 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 OnPropertyChanged("Email");
             }
         }
-
-        public string Desription
+               
+        public string Message
         {
-            get => desription;
+            get => message;
             set
             {
-                desription = value;
-                OnPropertyChanged("Desription");
+                message = value;
+                OnPropertyChanged("Message");
             }
         }
         public RelayCommand AddCommand { get; set; }
 
         public AddDriverViewModel()
         {
+            AddCommand = new RelayCommand(o =>
+            {
+                Drivers driver = new Drivers()
+                {
+                    name = Name,
+                    middlename = MiddleName,
+                    passport_serial = PassportSerial,
+                    passport_number = PassportNum,
+                    postcode = PostCode,
+                    address = Address,
+                    phone = Phone,
+                    email = Email,
+                };
 
+                Jobs job = new Jobs()
+                {
+                    jobname = JobName
+                };
+
+                Companies company = new Companies()
+                {
+                    company = Company
+                };
+
+                Message = DataWorker.AddNewDriver(driver, company, job);
+            });
         }
     }
 }
