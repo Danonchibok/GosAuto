@@ -1,0 +1,53 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Кнопка авторизации войти-->
+    <Style TargetType="{x:Type Button}"
+           x:Key="butLogin">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border             Width="308"
+                                        Height="73"
+                                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Cursor" Value="Hand"></Setter>
+      
+    </Style>
+
+    <!--Кнопка создания водителей в форме просмотра водителей -->
+    <Style BasedOn="{StaticResource {x:Type Button}}" 
+           TargetType="{x:Type Button}"
+           x:Key="butCreate">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="1000"
+                                Height="50"
+                                CornerRadius="10"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Gray"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="Cursor" Value="Hand"></Setter>
+        </Style.Setters>
+
+    </Style>
+</ResourceDictionary>

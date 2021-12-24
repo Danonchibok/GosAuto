@@ -109,6 +109,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\buttonsTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Theme\OnAuthPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -190,6 +194,7 @@
     <Compile Include="MVVM\ViewModel\DriversListViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LicencesListViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\WatchingDriversViewModel.cs" />
     <Compile Include="MVVM\View\CreateDrivers.xaml.cs">
       <DependentUpon>CreateDrivers.xaml</DependentUpon>
     </Compile>

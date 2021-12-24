@@ -6,11 +6,15 @@
              xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="650" d:DesignWidth="1000">
-    <StackPanel Orientation="Vertical">
+    <StackPanel Orientation="Vertical" 
+                Width="1000" Height="650"
+                Margin="0 30 0 0">
         <Button Height="50"
                 Content="СОЗДАТЬ КАРТОЧКУ ВОДИТЕЛЯ"
                 FontSize="16"
                 Background="White"
+                Style="{StaticResource butCreate}"
+                Command="{Binding }"
                 Foreground="Black"/>
 
         <Border Height="550"

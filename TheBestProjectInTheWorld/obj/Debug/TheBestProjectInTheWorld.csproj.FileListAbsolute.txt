@@ -197,3 +197,4 @@ D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWo
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.pdb
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\LicencesListView.g.cs
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\LicencesListView.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\buttonsTheme.baml

@@ -116,7 +116,8 @@
                 Content="НАЗАД"
                 Foreground="Black"
                 Height="50"
-                Width="480">
+                Width="480"
+                >
             </Button>
             <Button Margin="40 0 0 0"
                     HorizontalAlignment="Right"

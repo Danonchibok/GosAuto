@@ -50,17 +50,17 @@
                              Text="{Binding Password}"/>
 
                 
-                <!--<Button Grid.Row="3"
+                <Button Grid.Row="3"
                         VerticalAlignment="Top"
-                        Height="73"
-                        Width="308"
                         Background="White"
                         Content="ВОЙТИ"
                         FontSize="24"
+                        Style="{StaticResource butLogin }"
+                        
                         Command="{Binding LoginCommand}"
-                        IsEnabled="{Binding CanLogin}"/>-->
+                        IsEnabled="{Binding CanLogin}"/>
 
-                <StackPanel Grid.Row="3"
+                <!--<StackPanel Grid.Row="3"
                             Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Top">
@@ -87,17 +87,14 @@
                                         Background="{TemplateBinding Background}">
                                     <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="Center"/>
-
-
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
                         
                     </Button>
-                </StackPanel>
+                </StackPanel>-->
                 
                 <TextBlock Grid.Row="3"
-                           Width="68"
                            Foreground="White"
                            FontSize="17"
                            HorizontalAlignment="Center"

@@ -11,7 +11,8 @@
                 Content="СОЗДАТЬ ВУ"
                 FontSize="16"
                 Background="White"
-                Foreground="Black"/>
+                Foreground="Black"
+                Command="{Binding AddNewLicenceCommand}"/>
 
         <Border Height="550"
                 Background="#1B2B4E"
@@ -22,5 +23,7 @@
                           Width="910"
                           BorderThickness="1"/>
         </Border>
+        <ContentControl Content="{Binding CurrentView}"/>
     </StackPanel>
+    
 </UserControl>

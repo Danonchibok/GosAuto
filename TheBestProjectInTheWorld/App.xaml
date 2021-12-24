@@ -8,6 +8,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/buttonsTheme.xaml"/>
                 <ResourceDictionary Source="Theme/OnMainPage.xaml"/>
                 <ResourceDictionary Source="Theme/OnAuthPage.xaml"/>
                 <ResourceDictionary Source="Theme/onCreateDriversPage.xaml"/>
@@ -24,10 +25,15 @@
             <DataTemplate DataType="{x:Type viewModel:AddDriverViewModel}">
                 <view:CreateDrivers/>
             </DataTemplate>
-            
+
             <DataTemplate DataType="{x:Type viewModel:LicencesListViewModel}">
                 <view:LicencesListView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AddNewLicence}">
+                <view:DriverCard/>
+            </DataTemplate>
+            
             <BooleanToVisibilityConverter x:Key="BoolToVis"/>
         </ResourceDictionary>
     </Application.Resources>
