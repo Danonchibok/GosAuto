@@ -25,9 +25,13 @@
                 <ColumnDefinition Width="89"/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Row="0" Grid.ColumnSpan="3"
-                    Height="90"
-                    Background="#1B2B4E"/>
+           
+                <Border Grid.Row="0" Grid.ColumnSpan="3"
+                        Height="90"
+                        Background="#1B2B4E"/>
+
+            
+
 
             <Image Grid.Row="0" 
                    Grid.Column="0"
@@ -35,7 +39,7 @@
                     Height="56" 
                     Width="218"/>
 
-            <RadioButton Grid.Column="1"
+            <!--<RadioButton Grid.Column="1"
                          Style="{StaticResource ButtonsInHeadersOnMainPage}" 
                          Margin="0,0,541,0"
                          Content="ВОДИТЕЛИ"
@@ -45,7 +49,20 @@
                          Foreground="White"
                          Width="190"
                          Command="{Binding DriversCommand}"
-                         />
+                         />-->
+
+            <RadioButton Grid.Column="1"
+                         Style="{StaticResource MenuButtonsTheme}" 
+                         Margin="0,0,541,0"
+                         Content="ВОДИТЕЛИ"
+                         Background="Transparent"
+                         FontSize="16"
+                         BorderThickness="0 0 0 1"
+                         Foreground="White"
+                         Width="190"
+                         IsChecked="True"
+                         Command="{Binding DriversCommand}"
+                         Height="90"/>
 
             <RadioButton Grid.Column="1"
                          Content="ВУ"
@@ -55,7 +72,7 @@
                          Foreground="White"
                          Width="170"
                          Command="{Binding LicencesCommand}"
-                         Style="{StaticResource ButtonsInHeadersOnMainPage}" Margin="195,0,366,0"/>
+                         Style="{StaticResource MenuButtonsTheme}"  Margin="195,0,366,0"/>
 
             <RadioButton Grid.Column="1"
                          Content="ТС"
@@ -65,7 +82,7 @@
                          Foreground="White"
                          Width="170"
                          Command="{Binding CarsCommand}"
-                         Style="{StaticResource ButtonsInHeadersOnMainPage}" Margin="370,0,191,0"/>
+                        Style="{StaticResource MenuButtonsTheme}"  Margin="370,0,191,0"/>
 
             <RadioButton Grid.Column="1"
                          Content="ДТП"
@@ -74,16 +91,16 @@
                          FontSize="16"
                          Foreground="White"
                          Width="170"
-                         Style="{StaticResource ButtonsInHeadersOnMainPage}" Margin="545,0,16,0"
+                         Style="{StaticResource MenuButtonsTheme}"  Margin="545,0,16,0"
                          Command="{Binding DtpCommand}"/>
 
             <Button Grid.Column="2" 
-                    Width="77"
                     Content="ВЫЙТИ"
                     FontSize="16"
                     Foreground="White"
                     Background="Transparent"
                     BorderThickness="0"
+                    Style="{StaticResource ButExt}"
                     Command="{Binding ExitCommand}"/>
         </Grid>
         <ContentControl Content="{Binding CurrentView}"/>

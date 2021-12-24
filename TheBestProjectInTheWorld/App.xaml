@@ -8,6 +8,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/RadioButtonsOnMainPage.xaml"/>
                 <ResourceDictionary Source="Theme/buttonsTheme.xaml"/>
                 <ResourceDictionary Source="Theme/OnMainPage.xaml"/>
                 <ResourceDictionary Source="Theme/OnAuthPage.xaml"/>
@@ -36,6 +37,10 @@
 
             <DataTemplate DataType="{x:Type viewModel:MainInfoPageViewModel}">
                 <view:MainInformationPage/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:CarsViewModel}">
+                <view:CarsView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type viewModel:DtpViewModel}">
