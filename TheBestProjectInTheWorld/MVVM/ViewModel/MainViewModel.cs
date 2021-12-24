@@ -35,6 +35,8 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         public RelayCommand CreateDriversCommand { get; set; }
         public RelayCommand LicencesCommand { get; set; }
         public RelayCommand MainInfoCommand { get; set; }
+        public RelayCommand DtpCommand { get; set; }
+        public RelayCommand CarsCommand { get; set; }
 
 
 
@@ -43,7 +45,8 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         public DriversListViewModel DriversListVM { get; set; }
         public LicencesListViewModel LicencesListVM{ get; set; }
         public MainInfoPageViewModel MainInfoPageVM { get; set; }
- 
+        public DtpViewModel DtpVM { get; set; }
+        public CarsViewModel CarsVM { get; set; }
         public MainViewModel()
         {
             IsLogged = false; //Потом сменить false
@@ -52,12 +55,15 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             DriversListVM = new DriversListViewModel();
             LicencesListVM = new LicencesListViewModel();
             MainInfoPageVM = new MainInfoPageViewModel();
+            DtpVM = new DtpViewModel();
+            CarsVM = new CarsViewModel();
 
             curretnView = AuthVM;
 
             AuthVM.LoginEvent += AuthVM_LoginEvent;
             LicencesListVM.DriversCardEvent += LicencesListVM_DriversCardEvent;
             DriversListVM.AddDriverEvent += DriversListVM_AddDriverEvent;
+            DtpVM.DtpListEventHandler += DtpVM_DtpListEventHandler;
 
             ExitCommand = new RelayCommand(o =>
             {
@@ -84,8 +90,23 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             {
                 CurrentView = MainInfoPageVM;
             });
+
+            DtpCommand = new RelayCommand(o =>
+            {
+                CurrentView = DtpVM;
+            });
+
+            CarsCommand = new RelayCommand(o =>
+            {
+                CurrentView = CarsVM;
+            });
            
 
+        }
+
+        private void DtpVM_DtpListEventHandler(object sender, EventArgs e)
+        {
+            CurrentView = DtpVM.CreatorDtpVM;
         }
 
         private void DriversListVM_AddDriverEvent(object sender, EventArgs e)

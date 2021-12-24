@@ -288,3 +288,11 @@ C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVV
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.baml
 C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.g.cs
 C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.g.cs
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\dtpView.g.cs
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\dtpView.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.g.cs
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.g.cs
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.baml

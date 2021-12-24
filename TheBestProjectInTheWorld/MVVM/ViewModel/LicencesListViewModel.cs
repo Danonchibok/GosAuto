@@ -29,10 +29,10 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         public LicencesListViewModel()
         {
 
-            AddNewLicenceCommand = new RelayCommand(o => 
+            AddNewLicenceCommand = new RelayCommand(o =>
             {
                 AddNewLicenceVM = new AddNewLicence();
-                DriversCardEvent(this, new EventArgs()); 
+                DriversCardEvent(this, new EventArgs());
             });
 
         }

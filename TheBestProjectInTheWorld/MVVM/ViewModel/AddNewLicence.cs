@@ -91,7 +91,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         public RelayCommand AddCommand { get; set; }
         public AddNewLicence()
         {
-            Statuses = AutoContext.GetContext().Statuses.ToList();
+            //Statuses = AutoContext.GetContext().Statuses.ToList();
 
             AddCommand = new RelayCommand(o =>
             {

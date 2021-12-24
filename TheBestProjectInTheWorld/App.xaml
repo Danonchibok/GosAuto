@@ -37,6 +37,15 @@
             <DataTemplate DataType="{x:Type viewModel:MainInfoPageViewModel}">
                 <view:MainInformationPage/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DtpViewModel}">
+                <view:DtpView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:CreatorDtpViewModel}">
+                <view:CreatorDtpView/>
+            </DataTemplate>
+
             <BooleanToVisibilityConverter x:Key="BoolToVis"/>
         </ResourceDictionary>
     </Application.Resources>
