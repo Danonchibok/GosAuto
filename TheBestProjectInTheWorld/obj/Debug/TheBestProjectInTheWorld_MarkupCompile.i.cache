@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Applications\GosAuto\TheBestProjectInTheWorld\App.xaml
-16224123774
+17-1675745032
 2445293121
-50862048493
+51-614632488
 191365491228
-MainWindow.xaml;MVVM\View\CarsView.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\CreatorDtpView.xaml;MVVM\View\DriverCard.xaml;MVVM\View\DtpView.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\MainInformationPage.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingCardDrivers.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;Theme\RadioButtonsOnMainPage.xaml;
+MainWindow.xaml;MVVM\View\CarsView.xaml;MVVM\View\CreateCarView.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\CreatorDtpView.xaml;MVVM\View\DriverCard.xaml;MVVM\View\DtpView.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\MainInformationPage.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingCardDrivers.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;Theme\RadioButtonsOnMainPage.xaml;
 
 True
 

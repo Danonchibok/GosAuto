@@ -10,9 +10,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
     class DtpViewModel : ObservableObject
     {
         public RelayCommand DtpCreatorCommand { get; set; }
-
         public CreatorDtpViewModel CreatorDtpVM { get; set; }
-
         public event EventHandler DtpListEventHandler;
         public DtpViewModel()
         {

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
+             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View" xmlns:viewmodel="clr-namespace:TheBestProjectInTheWorld.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:CarsViewModel}"
              mc:Ignorable="d" 
             d:DesignHeight="650" d:DesignWidth="1000">
     <StackPanel Orientation="Vertical" 
@@ -14,7 +14,7 @@
                 FontSize="16"
                 Background="White"
                 Style="{StaticResource butCreate}"
-                Command="{Binding }"
+                Command="{Binding CarsVeiwCommand}"
                 Foreground="Black"/>
 
         <Border Height="550"

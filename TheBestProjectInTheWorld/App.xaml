@@ -51,6 +51,10 @@
                 <view:CreatorDtpView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:AddNewCar}">
+                <view:CreateCarView/>
+            </DataTemplate>
+
             <BooleanToVisibilityConverter x:Key="BoolToVis"/>
         </ResourceDictionary>
     </Application.Resources>

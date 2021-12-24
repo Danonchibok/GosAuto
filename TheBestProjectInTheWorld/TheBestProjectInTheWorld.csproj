@@ -89,6 +89,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\CreateCarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\CreateDrivers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -220,6 +224,9 @@
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\View\CarsView.xaml.cs">
       <DependentUpon>CarsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\CreateCarView.xaml.cs">
+      <DependentUpon>CreateCarView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\CreateDrivers.xaml.cs">
       <DependentUpon>CreateDrivers.xaml</DependentUpon>

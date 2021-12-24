@@ -64,7 +64,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             LicencesListVM.DriversCardEvent += LicencesListVM_DriversCardEvent;
             DriversListVM.AddDriverEvent += DriversListVM_AddDriverEvent;
             DtpVM.DtpListEventHandler += DtpVM_DtpListEventHandler;
-            
+            CarsVM.CarsViewEventHandler += CarsVM_CarsViewEventHandler;
 
             ExitCommand = new RelayCommand(o =>
             {
@@ -101,8 +101,11 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             {
                 CurrentView = CarsVM;
             });
-           
+        }
 
+        private void CarsVM_CarsViewEventHandler(object sender, EventArgs e)
+        {
+            CurrentView = CarsVM.AddNewCarVM;
         }
 
         private void DtpVM_DtpListEventHandler(object sender, EventArgs e)
