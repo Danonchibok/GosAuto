@@ -45,9 +45,38 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            
 
             <Setter Property="Cursor" Value="Hand"></Setter>
         </Style.Setters>
+    </Style>
 
+    <!--Кнопки для создания и для выхода назад-->
+    <Style BasedOn="{StaticResource {x:Type Button}}" 
+           TargetType="{x:Type Button}"
+           x:Key="2buttons">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Height="50"
+                                Width="480"
+                                CornerRadius="10"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Gray"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="Cursor" Value="Hand"></Setter>
+        </Style.Setters>
     </Style>
 </ResourceDictionary>

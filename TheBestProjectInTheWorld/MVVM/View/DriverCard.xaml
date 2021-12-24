@@ -6,11 +6,12 @@
              xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="710" d:DesignWidth="1000">
-    <StackPanel Orientation="Vertical">
+    <StackPanel Orientation="Vertical"
+                Width="1000" Height="710">
         <TextBlock Text="Заполение водительских прав"
-                   FontSize="35"
+                   FontSize="30"
                    Foreground="White"
-                   Margin="10 0 0 10"/>
+                   Margin="0 0 0 5"/>
 
         <Border Height="550"
                 Background="#1B2B4E"
@@ -40,23 +41,21 @@
         </Border>
 
         <StackPanel Orientation="Horizontal"
-                    Margin="0 25 0 0">
+                    Margin="0 15 0 0">
             <Button 
                 FontSize="16"
                 Background="White"
                 Content="НАЗАД"
                 Foreground="Black"
-                Height="50"
-                Width="480">
+                Style="{StaticResource 2buttons}">
             </Button>
             <Button Margin="40 0 0 0"
                     HorizontalAlignment="Right"
-                    Height="50"
-                    Width="480"
                     Content="СОЗДАТЬ"
                     FontSize="16"
                     Background="White"
-                    Foreground="Black"/>
+                    Foreground="Black"
+                     Style="{StaticResource 2buttons}"/>
         </StackPanel>
     </StackPanel>
 </UserControl>

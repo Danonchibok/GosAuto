@@ -35,6 +35,7 @@
 
                 <TextBox Grid.Row="1" 
                         Style="{StaticResource TextBoxTheme}"
+                         
                          Text="{Binding Login}"/>
 
                 <TextBlock Grid.Row="2" 

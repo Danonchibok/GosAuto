@@ -25,7 +25,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 
         public DriversListViewModel()
         {
-            Drivers = new ObservableCollection<Drivers>(AutoContext.GetContext().Drivers.ToList());
+            //Drivers = new ObservableCollection<Drivers>(AutoContext.GetContext().Drivers.ToList());
         }
 
     }

@@ -97,6 +97,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\MainInformationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\PageAuth.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -193,6 +197,7 @@
     <Compile Include="MVVM\ViewModel\AuthViewModel.cs" />
     <Compile Include="MVVM\ViewModel\DriversListViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LicencesListViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\MainInfoPageViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\View\CreateDrivers.xaml.cs">
       <DependentUpon>CreateDrivers.xaml</DependentUpon>
@@ -202,6 +207,9 @@
     </Compile>
     <Compile Include="MVVM\View\LicencesListView.xaml.cs">
       <DependentUpon>LicencesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\MainInformationPage.xaml.cs">
+      <DependentUpon>MainInformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\PageAuth.xaml.cs">
       <DependentUpon>PageAuth.xaml</DependentUpon>

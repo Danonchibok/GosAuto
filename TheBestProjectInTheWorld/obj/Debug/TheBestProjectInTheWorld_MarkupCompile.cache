@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\App.xaml
-11-1842182627
+12-2070756719
 2445293121
-41765477732
+43-1813232447
 191209659466
-MainWindow.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\DriverCard.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingCardDrivers.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;
+MainWindow.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\DriverCard.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\MainInformationPage.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingCardDrivers.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;
 
 False
 

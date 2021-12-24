@@ -32,8 +32,11 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{Binding name}"/>
-                            <TextBlock Text="{Binding middlename}"/>
+                            <StackPanel Orientation="Horizontal">
+                                 <TextBlock Text="{Binding name, StringFormat={}Имя:{0}}"
+                                            Margin="0 0 10 0"/>
+                                 <TextBlock Text="{Binding middlename}"/>
+                            </StackPanel>
                             <TextBlock Text="{Binding passportSerial}"/>
                             <TextBlock Text="{Binding passportNumber}"/>
                         </StackPanel>

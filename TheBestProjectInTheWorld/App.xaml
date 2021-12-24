@@ -33,7 +33,10 @@
             <DataTemplate DataType="{x:Type viewModel:AddNewLicence}">
                 <view:DriverCard/>
             </DataTemplate>
-            
+
+            <DataTemplate DataType="{x:Type viewModel:MainInfoPageViewModel}">
+                <view:MainInformationPage/>
+            </DataTemplate>
             <BooleanToVisibilityConverter x:Key="BoolToVis"/>
         </ResourceDictionary>
     </Application.Resources>
