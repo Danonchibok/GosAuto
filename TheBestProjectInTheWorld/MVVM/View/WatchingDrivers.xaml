@@ -23,7 +23,7 @@
                 CornerRadius="25">
             <ListView Height="490"
                       Foreground="White"
-                      FontSize="13"
+                      FontSize="17"
                       ItemsSource="{Binding Drivers}"
                       SelectedItem="{Binding CurrentDriver}"
                           Background="Transparent"
@@ -31,20 +31,39 @@
                           BorderThickness="1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Vertical">
-                            <StackPanel Orientation="Horizontal">
-<<<<<<< Updated upstream
-                                 <TextBlock Text="{Binding name, StringFormat={}Имя:{0}}"
-                                            Margin="0 0 10 0"/>
-                                 <TextBlock Text="{Binding middlename}"/>
-=======
-                                <TextBlock Text="{Binding name, StringFormat={}Имя: {0}}" Margin="0 0 5 0"/>
-                                <TextBlock Text="{Binding middlename}"/>
-                                
->>>>>>> Stashed changes
+                        <StackPanel Orientation="Horizontal" >
+                            
+                            <StackPanel Width="40" Height="50"
+                                        HorizontalAlignment="Left"
+                                        Margin="0 0 10 0">
+                                <Image Source="{Binding photo}"></Image>
                             </StackPanel>
-                            <TextBlock Text="{Binding passportSerial}"/>
-                            <TextBlock Text ="{Binding passportNumber}"/>
+                            <StackPanel Orientation="Vertical">
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding name, StringFormat={}ФИО: {0}}"
+                                                    Margin="0 0 5 5"/>
+                                    <TextBlock Text="{Binding middlename}"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding passportSerial, StringFormat={}Серия: {0}}"
+                                                   Margin=" 0 0 15 0"/>
+                                    <TextBlock Text ="{Binding passportNumber, StringFormat={}Номер: {0}}"
+                                                   Margin=" 0 0 15 0"/>
+                                </StackPanel>
+
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                                <TextBlock Text="{Binding address, StringFormat={}Адрес: {0}}"
+                                           Margin=" 0 0 15 0"/>
+                            </StackPanel>
+
+                                <StackPanel Orientation="Vertical" Margin="15 0 0 0">
+                                    <TextBlock Text="{Binding companyId, StringFormat={}Компания: {0}}"
+                                               Margin=" 0 0 15 0"/>
+                                    <TextBlock Text="{Binding jobId, StringFormat={}Должность: {0}}"/>
+                                </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

@@ -29,18 +29,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 
         public DriversListViewModel()
         {
-<<<<<<< Updated upstream
-            //Drivers = new ObservableCollection<Drivers>(AutoContext.GetContext().Drivers.ToList());
-=======
             Drivers = new ObservableCollection<Drivers>(AutoContext.GetContext().Drivers.ToList());
-
-            AddDriverCommand = new RelayCommand(o =>
-            {
-                AddDriverVM = new AddDriverViewModel();
-                AddDriverEvent(this, new EventArgs());
-            });
-           
->>>>>>> Stashed changes
         }
 
         private void ChangeDriver(Drivers driver)

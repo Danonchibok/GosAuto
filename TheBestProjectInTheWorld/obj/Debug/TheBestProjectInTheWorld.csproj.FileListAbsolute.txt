@@ -286,3 +286,5 @@ C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.exe
 C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.pdb
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.g.cs
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.g.cs
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.baml
