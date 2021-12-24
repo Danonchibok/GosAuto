@@ -35,7 +35,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         public RelayCommand CreateDriversCommand { get; set; }
         public RelayCommand LicencesCommand { get; set; }
 
-        public RelayCommand AddNewLicenceCommand { get; set; }
+ 
 
 
 
@@ -46,7 +46,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         public DriversListViewModel DriversListVM { get; set; }
         public LicencesListViewModel LicencesListVM{ get; set; }
 
-        public AddNewLicence AddNewLicenceVM { get; set; }
+
 
 
 
@@ -58,11 +58,11 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             DriversListVM = new DriversListViewModel();
             LicencesListVM = new LicencesListViewModel();
 
-            AddNewLicenceVM = new AddNewLicence();  
-            
             curretnView = AuthVM;
 
             AuthVM.LoginEvent += AuthVM_LoginEvent;
+            LicencesListVM.DriversCardEvent += LicencesListVM_DriversCardEvent;
+
 
             ExitCommand = new RelayCommand(o =>
             {
@@ -85,11 +85,13 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                CurrentView = AddDriverVM;
             });
 
-            AddNewLicenceCommand = new RelayCommand(o => 
-            {
-                CurrentView = AddNewLicenceVM;   
-            });
+           
 
+        }
+
+        private void LicencesListVM_DriversCardEvent(object sender, EventArgs e)
+        {
+            CurrentView = LicencesListVM.AddNewLicenceVM;
         }
 
         private void AuthVM_LoginEvent(object sender, EventArgs e)
