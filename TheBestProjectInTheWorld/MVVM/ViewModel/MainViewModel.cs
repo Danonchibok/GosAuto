@@ -64,6 +64,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             LicencesListVM.DriversCardEvent += LicencesListVM_DriversCardEvent;
             DriversListVM.AddDriverEvent += DriversListVM_AddDriverEvent;
             DtpVM.DtpListEventHandler += DtpVM_DtpListEventHandler;
+            
 
             ExitCommand = new RelayCommand(o =>
             {

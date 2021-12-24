@@ -113,7 +113,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 OnPropertyChanged("Email");
             }
         }
-               
+
         public string Message
         {
             get => message;
@@ -124,10 +124,11 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             }
         }
         public RelayCommand AddCommand { get; set; }
-
-
+   
         public AddDriverViewModel()
         {
+        
+
             AddCommand = new RelayCommand(o =>
             {
                 Drivers driver = new Drivers()

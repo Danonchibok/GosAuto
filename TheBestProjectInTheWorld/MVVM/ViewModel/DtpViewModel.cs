@@ -16,8 +16,6 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         public event EventHandler DtpListEventHandler;
         public DtpViewModel()
         {
-            CreatorDtpVM = new CreatorDtpViewModel();
-
             DtpCreatorCommand = new RelayCommand(o =>
             {
                 CreatorDtpVM = new CreatorDtpViewModel();

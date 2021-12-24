@@ -14,7 +14,7 @@
                 FontSize="16"
                 Background="White"
                 Style="{StaticResource butCreate}"
-                Command="{Binding }"
+                Command="{Binding addNewDriversCommand}"
                 Foreground="Black"/>
 
         <Border Height="550"

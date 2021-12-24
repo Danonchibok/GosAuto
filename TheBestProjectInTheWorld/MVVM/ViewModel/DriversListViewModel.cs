@@ -26,9 +26,16 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 OnPropertyChanged("CurrentDriver");
             }
         }
-
+        public RelayCommand addNewDriversCommand { get; set; }
+       
         public DriversListViewModel()
         {
+            addNewDriversCommand = new RelayCommand(o =>
+            {
+                AddDriverVM = new AddDriverViewModel();
+                AddDriverEvent(this, new EventArgs());
+            });
+
             //Drivers = new ObservableCollection<Drivers>(AutoContext.GetContext().Drivers.ToList());
         }
 
