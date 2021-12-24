@@ -23,7 +23,7 @@
                           Width="910"
                           BorderThickness="1"/>
         </Border>
-        <ContentControl Content="{Binding CurrentView}"/>
+   
     </StackPanel>
     
 </UserControl>
