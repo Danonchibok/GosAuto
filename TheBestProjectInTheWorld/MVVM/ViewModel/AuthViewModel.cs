@@ -71,17 +71,17 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 
             LoginCommand = new RelayCommand(o =>
             {
-                //List<Employees> employees = AutoContext.GetContext().Employees.Where(e => e.login == Login).ToList();
-                //employees = employees.Where(e => e.password == Password).ToList();
-                //if (employees.Count > 0)
-                //{
-                //    LoginEvent(this, new EventArgs());
-
-                //}
-                if (Login == "Log" && Password == "Log")
+                List<Employees> employees = AutoContext.GetContext().Employees.Where(e => e.login == Login).ToList();
+                employees = employees.Where(e => e.password == Password).ToList();
+                if (employees.Count > 0)
                 {
                     LoginEvent(this, new EventArgs());
+
                 }
+                //if (Login == "Log" && Password == "Log")
+                //{
+                //    LoginEvent(this, new EventArgs());
+                //}
                 else
                 {
                     attempts++;

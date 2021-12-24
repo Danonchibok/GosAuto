@@ -60,5 +60,21 @@ namespace TheBestProjectInTheWorld.Core
             }
             return message;
         }
+
+        public static string AddNewLicence(Licences licence)
+        {
+            string message = "Добавлено";
+            List<Licences> licences = AutoContext.GetContext().Licences.Where(l => l.licenceNumber == licence.licenceNumber).ToList();
+            if (licences.Count > 0)
+            {
+                message = "Невозможно добавить, такое удостоверение уже есть";
+            }
+            else
+            {
+                AutoContext.GetContext().Licences.Add(licence);
+                AutoContext.GetContext().SaveChanges();
+            }
+            return message;
+        }
     }
 }

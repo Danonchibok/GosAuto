@@ -57,7 +57,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 
             AuthVM.LoginEvent += AuthVM_LoginEvent;
             LicencesListVM.DriversCardEvent += LicencesListVM_DriversCardEvent;
-
+            DriversListVM.AddDriverEvent += DriversListVM_AddDriverEvent;
 
             ExitCommand = new RelayCommand(o =>
             {
@@ -86,6 +86,11 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             });
            
 
+        }
+
+        private void DriversListVM_AddDriverEvent(object sender, EventArgs e)
+        {
+            CurrentView = DriversListVM.AddDriverVM;
         }
 
         private void LicencesListVM_DriversCardEvent(object sender, EventArgs e)

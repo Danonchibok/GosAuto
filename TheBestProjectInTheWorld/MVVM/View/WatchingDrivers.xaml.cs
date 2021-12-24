@@ -24,5 +24,7 @@ namespace TheBestProjectInTheWorld.MVVM.View
         {
             InitializeComponent();
         }
+
+        
     }
 }

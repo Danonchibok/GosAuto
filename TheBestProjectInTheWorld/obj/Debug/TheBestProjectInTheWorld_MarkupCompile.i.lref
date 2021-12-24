@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
 FC:\GosAuto\TheBestProjectInTheWorld\App.xaml;;
 FC:\GosAuto\TheBestProjectInTheWorld\MainWindow.xaml;;
@@ -7,6 +8,9 @@ FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\LicencesListView.xaml;;
 FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\MainInformationPage.xaml;;
 FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\PageAuth.xaml;;
 FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\WatchingCardDrivers.xaml;;
+=======
+﻿
+
+>>>>>>> Stashed changes
 FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\WatchingDrivers.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\Theme\OnAuthPage.xaml;;
 
