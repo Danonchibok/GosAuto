@@ -22,11 +22,25 @@
                 Margin="0 26 0 0"
                 CornerRadius="25">
             <ListView Height="490"
+                      Foreground="White"
+                      FontSize="13"
                       ItemsSource="{Binding Drivers}"
                       SelectedItem="{Binding CurrentDriver}"
                           Background="Transparent"
                           Width="910"
-                          BorderThickness="1"/>
+                          BorderThickness="1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding name}"/>
+                            <TextBlock Text="{Binding middlename}"/>
+                            <TextBlock Text="{Binding passportSerial}"/>
+                            <TextBlock Text="{Binding passportNumber}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </Border>
     </StackPanel>
 </UserControl>
