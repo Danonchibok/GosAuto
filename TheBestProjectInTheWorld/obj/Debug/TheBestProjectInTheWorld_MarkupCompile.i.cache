@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\
 TheBestProjectInTheWorld
 none
 false
 DEBUG;TRACE
-D:\Applications\GosAuto\TheBestProjectInTheWorld\App.xaml
+C:\GosAuto\TheBestProjectInTheWorld\App.xaml
 11-1842182627
 2445293121
-4390731424
-191365491228
+421733404793
+19-327988458
 MainWindow.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\DriverCard.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingCardDrivers.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;
 
 True
