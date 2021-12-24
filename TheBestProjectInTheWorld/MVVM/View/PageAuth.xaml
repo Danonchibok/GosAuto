@@ -45,13 +45,12 @@
                            HorizontalAlignment="Center"/>
                 
                 <TextBox Grid.Row="2" 
-                             Width="353"
-                             Height="54"
-                             Background="#162340"
-                             BorderThickness="0"
+                             Style="{StaticResource TextBoxThemePas}"
+                         
                              Text="{Binding Password}"/>
 
-                <Button Grid.Row="3"
+                
+                <!--<Button Grid.Row="3"
                         VerticalAlignment="Top"
                         Height="73"
                         Width="308"
@@ -59,9 +58,46 @@
                         Content="ВОЙТИ"
                         FontSize="24"
                         Command="{Binding LoginCommand}"
-                        IsEnabled="{Binding CanLogin}"/>
+                        IsEnabled="{Binding CanLogin}"/>-->
+
+                <StackPanel Grid.Row="3"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top">
+
+                    <Button Height="73"
+                            Foreground="Black"
+                            Width="308"
+                            FontSize="16"
+                            Content="ВОЙТИ"
+                            Command="{Binding LoginCommand}"
+                            IsEnabled="{Binding CanLogin}">
+                            
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="White"/>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="308"
+                                        Height="73"
+                                        CornerRadius="10"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                        
+                    </Button>
+                </StackPanel>
+                
                 <TextBlock Grid.Row="3"
-                           Width="100"
+                           Width="68"
                            Foreground="White"
                            FontSize="17"
                            HorizontalAlignment="Center"

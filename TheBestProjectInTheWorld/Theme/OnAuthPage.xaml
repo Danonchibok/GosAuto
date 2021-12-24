@@ -15,6 +15,32 @@
                             VerticalAlignment="Bottom">
                         <Grid>
                             <TextBlock Text="{TemplateBinding Text}"
+                                       VerticalAlignment="Center"
+                                       Foreground="White" 
+                                       FontSize="24"
+                                       HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Поле ввода пароля-->
+    <Style TargetType="{x:Type TextBox}"
+           x:Key="TextBoxThemePas">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border CornerRadius="10"
+                            Width="353"
+                            Height="54"
+                            Background="#162340"
+                            BorderThickness="0"
+                            VerticalAlignment="Center">
+                        <Grid>
+                            <TextBlock Text="{TemplateBinding Text}"
+                                       VerticalAlignment="Center"
                                        Foreground="White" 
                                        FontSize="24"
                                        HorizontalAlignment="Center"/>
