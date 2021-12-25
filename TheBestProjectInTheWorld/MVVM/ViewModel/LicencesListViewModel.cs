@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,9 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 {
     class LicencesListViewModel : ObservableObject
     {
+        
         private Licences currentLicences;
+        public ObservableCollection<Licences> Licences { get; set; }
         public RelayCommand AddNewLicenceCommand { get; set; }
         public AddNewLicence AddNewLicenceVM { get; set; }
         public Licences CurrentLicences
@@ -28,7 +31,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 
         public LicencesListViewModel()
         {
-
+            Licences = new ObservableCollection<Licences>(AutoContext.GetContext().Licences.ToList());
             AddNewLicenceCommand = new RelayCommand(o =>
             {
                 AddNewLicenceVM = new AddNewLicence();

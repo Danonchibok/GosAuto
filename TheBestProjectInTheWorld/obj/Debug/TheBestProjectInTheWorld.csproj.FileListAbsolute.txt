@@ -299,3 +299,12 @@ D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpV
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\RadioButtonsOnMainPage.baml
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.g.cs
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\RadioButtonsOnMainPage.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.g.cs
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.g.cs
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.g.cs
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.g.cs
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.baml

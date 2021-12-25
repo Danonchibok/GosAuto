@@ -129,7 +129,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 licence.licenceNumber = LicenceNumber;
                 licence.Statuses = Status;
 
-                AutoContext.GetContext().SaveChanges();
+                Message = DataWorker.EditLicence(licence);
             });
         }
     }
