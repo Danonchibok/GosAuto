@@ -40,12 +40,12 @@ namespace TheBestProjectInTheWorld.MVVM.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cars> Cars { get; set; }
-        public virtual Companies Companies { get; set; }
-        public virtual Jobs Jobs { get; set; }
-        public virtual Licences Licences { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChangedDriversHistory> ChangedDriversHistory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChangedDriversHistory> ChangedDriversHistory1 { get; set; }
+        public virtual Companies Companies { get; set; }
+        public virtual Jobs Jobs { get; set; }
+        public virtual Licences Licences { get; set; }
     }
 }

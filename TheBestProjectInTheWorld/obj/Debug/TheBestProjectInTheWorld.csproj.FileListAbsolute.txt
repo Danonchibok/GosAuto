@@ -320,3 +320,19 @@ C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.baml
 C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.baml
 C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.baml
 >>>>>>> 82e147ea9517de8ff7692475841562b289304f8f
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\buttonsTheme.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\RadioButtonsOnMainPage.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\LicencesListView.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.g.cs
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\LicencesListView.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\ComboBoxTheme.baml
+E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\textBoxTheme.baml

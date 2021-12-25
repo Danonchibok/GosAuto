@@ -10,6 +10,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 {
     class AddDriverViewModel : ObservableObject
     {
+        private const string imgPath = "/Images/Drivers/";
         private string message;
         private string name;
         private string middleName;
@@ -113,6 +114,15 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 OnPropertyChanged("Email");
             }
         }
+        public string Photo
+        {
+            get => photo;
+            set
+            {
+                photo = value;
+                OnPropertyChanged("Photo");
+            }
+        }
 
         public string Message
         {
@@ -168,6 +178,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             Phone = driver.phone;
             Email = driver.email;
 
+            Photo = imgPath + driver.photo;
             AddCommand = new RelayCommand(o => 
             {
                 Message = DataWorker.EditDriver(driver, Name, MiddleName, PassportSerial, PassportNum, PostCode, Address, Phone, Email);

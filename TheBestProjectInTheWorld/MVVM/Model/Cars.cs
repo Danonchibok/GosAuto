@@ -14,12 +14,6 @@ namespace TheBestProjectInTheWorld.MVVM.Model
     
     public partial class Cars
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cars()
-        {
-            this.ChangedDriversHistory = new HashSet<ChangedDriversHistory>();
-        }
-    
         public int id { get; set; }
         public string VIN { get; set; }
         public Nullable<double> Year { get; set; }
@@ -29,14 +23,12 @@ namespace TheBestProjectInTheWorld.MVVM.Model
         public Nullable<int> ManufaturerId { get; set; }
         public Nullable<int> TypeId { get; set; }
         public Nullable<int> ModelId { get; set; }
-        public int DriverId { get; set; }
+        public int driverId { get; set; }
     
         public virtual Drivers Drivers { get; set; }
         public virtual EngineTypes EngineTypes { get; set; }
         public virtual Manufacturers Manufacturers { get; set; }
         public virtual Models Models { get; set; }
         public virtual TypeDrives TypeDrives { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChangedDriversHistory> ChangedDriversHistory { get; set; }
     }
 }

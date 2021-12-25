@@ -43,7 +43,7 @@
                          Height="160"
                          BorderBrush="Gray"
                          BorderThickness="1">
-                    <Image Source="/Images/image 3.png"/>
+                    <Image Source="{Binding Photo}"/>
                 </Border>
 
                 <TextBox Grid.Row="0" Grid.Column="1"

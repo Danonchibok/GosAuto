@@ -13,13 +13,12 @@
     <Property Name="ManufaturerId" Type="Int32" />
     <Property Name="TypeId" Type="Int32" />
     <Property Name="ModelId" Type="Int32" />
-    <Property Name="DriverId" Type="Int32" Nullable="false" />
+    <Property Name="driverId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Drivers" Relationship="Self.FK_Cars_Drivers" FromRole="Cars" ToRole="Drivers" />
     <NavigationProperty Name="EngineTypes" Relationship="Self.FK_Cars_EngineTypes" FromRole="Cars" ToRole="EngineTypes" />
     <NavigationProperty Name="Manufacturers" Relationship="Self.FK_Cars_Manufacturers" FromRole="Cars" ToRole="Manufacturers" />
     <NavigationProperty Name="Models" Relationship="Self.FK_Cars_Models" FromRole="Cars" ToRole="Models" />
     <NavigationProperty Name="TypeDrives" Relationship="Self.FK_Cars_TypeDrives" FromRole="Cars" ToRole="TypeDrives" />
-    <NavigationProperty Name="ChangedDriversHistory" Relationship="GosAutoModel.FK_ChangedDriversHistory_Cars" FromRole="Cars" ToRole="ChangedDriversHistory" />
   </EntityType>
   <EntityType Name="ChangedDriversHistory">
     <Key>
@@ -29,10 +28,8 @@
     <Property Name="changedFromDriversId" Type="Int32" Nullable="false" />
     <Property Name="changedToDriversId" Type="Int32" Nullable="false" />
     <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="carId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Cars" Relationship="GosAutoModel.FK_ChangedDriversHistory_Cars" FromRole="ChangedDriversHistory" ToRole="Cars" />
-    <NavigationProperty Name="Drivers" Relationship="GosAutoModel.FK_ChangedDriversHistory_Drivers" FromRole="ChangedDriversHistory" ToRole="Drivers" />
-    <NavigationProperty Name="Drivers1" Relationship="GosAutoModel.FK_ChangedDriversHistory_Drivers1" FromRole="ChangedDriversHistory" ToRole="Drivers" />
+    <NavigationProperty Name="Drivers" Relationship="Self.FK_ChangedDriversHistory_Drivers" FromRole="ChangedDriversHistory" ToRole="Drivers" />
+    <NavigationProperty Name="Drivers1" Relationship="Self.FK_ChangedDriversHistory_Drivers1" FromRole="ChangedDriversHistory" ToRole="Drivers" />
   </EntityType>
   <EntityType Name="ChangedStatusHistory">
     <Key>
@@ -75,11 +72,11 @@
     <Property Name="jobId" Type="Int32" />
     <Property Name="licenceId" Type="Int32" />
     <NavigationProperty Name="Cars" Relationship="Self.FK_Cars_Drivers" FromRole="Drivers" ToRole="Cars" />
+    <NavigationProperty Name="ChangedDriversHistory" Relationship="Self.FK_ChangedDriversHistory_Drivers" FromRole="Drivers" ToRole="ChangedDriversHistory" />
+    <NavigationProperty Name="ChangedDriversHistory1" Relationship="Self.FK_ChangedDriversHistory_Drivers1" FromRole="Drivers" ToRole="ChangedDriversHistory" />
     <NavigationProperty Name="Companies" Relationship="Self.FK_Drivers_Companies" FromRole="Drivers" ToRole="Companies" />
     <NavigationProperty Name="Jobs" Relationship="Self.FK_Drivers_Jobs" FromRole="Drivers" ToRole="Jobs" />
     <NavigationProperty Name="Licences" Relationship="Self.FK_Drivers_Licences" FromRole="Drivers" ToRole="Licences" />
-    <NavigationProperty Name="ChangedDriversHistory" Relationship="GosAutoModel.FK_ChangedDriversHistory_Drivers" FromRole="Drivers" ToRole="ChangedDriversHistory" />
-    <NavigationProperty Name="ChangedDriversHistory1" Relationship="GosAutoModel.FK_ChangedDriversHistory_Drivers1" FromRole="Drivers" ToRole="ChangedDriversHistory" />
   </EntityType>
   <EntityType Name="Employees">
     <Key>
@@ -183,7 +180,7 @@
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="Cars">
-        <PropertyRef Name="DriverId" />
+        <PropertyRef Name="driverId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -232,6 +229,30 @@
       </Principal>
       <Dependent Role="Cars">
         <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangedDriversHistory_Drivers">
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="1" />
+    <End Role="ChangedDriversHistory" Type="Self.ChangedDriversHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangedDriversHistory">
+        <PropertyRef Name="changedFromDriversId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangedDriversHistory_Drivers1">
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="1" />
+    <End Role="ChangedDriversHistory" Type="Self.ChangedDriversHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangedDriversHistory">
+        <PropertyRef Name="changedToDriversId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -367,6 +388,14 @@
       <End Role="TypeDrives" EntitySet="TypeDrives" />
       <End Role="Cars" EntitySet="Cars" />
     </AssociationSet>
+    <AssociationSet Name="FK_ChangedDriversHistory_Drivers" Association="Self.FK_ChangedDriversHistory_Drivers">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="ChangedDriversHistory" EntitySet="ChangedDriversHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangedDriversHistory_Drivers1" Association="Self.FK_ChangedDriversHistory_Drivers1">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="ChangedDriversHistory" EntitySet="ChangedDriversHistory" />
+    </AssociationSet>
     <AssociationSet Name="FK_ChangedStatusHistory_Licences" Association="Self.FK_ChangedStatusHistory_Licences">
       <End Role="Licences" EntitySet="Licences" />
       <End Role="ChangedStatusHistory" EntitySet="ChangedStatusHistory" />
@@ -399,53 +428,5 @@
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Licences" EntitySet="Licences" />
     </AssociationSet>
-    <AssociationSet Name="FK_ChangedDriversHistory_Cars" Association="GosAutoModel.FK_ChangedDriversHistory_Cars">
-      <End Role="Cars" EntitySet="Cars" />
-      <End Role="ChangedDriversHistory" EntitySet="ChangedDriversHistory" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ChangedDriversHistory_Drivers" Association="GosAutoModel.FK_ChangedDriversHistory_Drivers">
-      <End Role="Drivers" EntitySet="Drivers" />
-      <End Role="ChangedDriversHistory" EntitySet="ChangedDriversHistory" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ChangedDriversHistory_Drivers1" Association="GosAutoModel.FK_ChangedDriversHistory_Drivers1">
-      <End Role="Drivers" EntitySet="Drivers" />
-      <End Role="ChangedDriversHistory" EntitySet="ChangedDriversHistory" />
-    </AssociationSet>
   </EntityContainer>
-  <Association Name="FK_ChangedDriversHistory_Cars">
-    <End Type="GosAutoModel.Cars" Role="Cars" Multiplicity="1" />
-    <End Type="GosAutoModel.ChangedDriversHistory" Role="ChangedDriversHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Cars">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="ChangedDriversHistory">
-        <PropertyRef Name="carId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ChangedDriversHistory_Drivers">
-    <End Type="GosAutoModel.Drivers" Role="Drivers" Multiplicity="1" />
-    <End Type="GosAutoModel.ChangedDriversHistory" Role="ChangedDriversHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Drivers">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="ChangedDriversHistory">
-        <PropertyRef Name="changedFromDriversId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ChangedDriversHistory_Drivers1">
-    <End Type="GosAutoModel.Drivers" Role="Drivers" Multiplicity="1" />
-    <End Type="GosAutoModel.ChangedDriversHistory" Role="ChangedDriversHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Drivers">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="ChangedDriversHistory">
-        <PropertyRef Name="changedToDriversId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>

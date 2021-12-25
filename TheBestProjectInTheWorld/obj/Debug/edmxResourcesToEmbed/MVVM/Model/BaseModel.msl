@@ -13,14 +13,13 @@
           <ScalarProperty Name="ManufaturerId" ColumnName="ManufaturerId" />
           <ScalarProperty Name="TypeId" ColumnName="TypeId" />
           <ScalarProperty Name="ModelId" ColumnName="ModelId" />
-          <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+          <ScalarProperty Name="driverId" ColumnName="driverId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChangedDriversHistory">
       <EntityTypeMapping TypeName="GosAutoModel.ChangedDriversHistory">
         <MappingFragment StoreEntitySet="ChangedDriversHistory">
-          <ScalarProperty Name="carId" ColumnName="carId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="changedFromDriversId" ColumnName="changedFromDriversId" />
           <ScalarProperty Name="changedToDriversId" ColumnName="changedToDriversId" />

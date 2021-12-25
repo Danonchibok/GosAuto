@@ -18,9 +18,7 @@ namespace TheBestProjectInTheWorld.MVVM.Model
         public int changedFromDriversId { get; set; }
         public int changedToDriversId { get; set; }
         public System.DateTime date { get; set; }
-        public int carId { get; set; }
     
-        public virtual Cars Cars { get; set; }
         public virtual Drivers Drivers { get; set; }
         public virtual Drivers Drivers1 { get; set; }
     }
