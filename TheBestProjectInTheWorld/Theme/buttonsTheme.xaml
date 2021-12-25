@@ -18,7 +18,6 @@
             </Setter.Value>
         </Setter>
         <Setter Property="Cursor" Value="Hand"></Setter>
-      
     </Style>
 
     <!--Кнопка создания водителей в форме просмотра водителей -->
@@ -107,5 +106,22 @@
             <Setter Property="Cursor" Value="Hand"></Setter>
         </Style.Setters>
     </Style>
-    
+
+    <!--Кнопка дтп-->
+    <Style TargetType="{x:Type Button}"
+           x:Key="dtpBut">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border           
+                                        CornerRadius="10"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Cursor" Value="Hand"></Setter>
+    </Style>
 </ResourceDictionary>
