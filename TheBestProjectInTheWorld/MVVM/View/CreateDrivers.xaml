@@ -47,33 +47,40 @@
                 </Border>
 
                 <TextBox Grid.Row="0" Grid.Column="1"
-                     Text="Идентификатор GUID"
-                     Style="{StaticResource driversBox}"/>
+                     Style="{StaticResource placeHolder}"
+                         Text=""
+                         Tag="111 Идентификатор GUID"/>
+                     
 
                 <TextBox Grid.Row="1" Grid.Column="1"
-                     Text="Фамилия"
-                       Style="{StaticResource driversBox}"/>
+                     Tag="Фамилия"
+                     Text="{Binding MiddleName}"
+                     Style="{StaticResource placeHolder}"/>
 
                 <TextBox Grid.Row="2" Grid.Column="1"
-                     Text="Имя"
-                           Style="{StaticResource driversBox}"/>
+                     Tag="Имя"
+                     Text="{Binding Name}"
+                           Style="{StaticResource placeHolder}"/>
 
                 <TextBox Grid.Row="3"  Grid.Column="1"
-                     Text="Отчество"
+                     Text="111 Отчество"
                            Style="{StaticResource driversBox}"/>
 
                 <TextBox Grid.Row="4" Grid.Column="1"
-                     Text="Серия паспорта"
-                           Style="{StaticResource driversBox}"/>
+                     Tag="Серия паспорта"
+                     Text="{Binding PassportSerial}"
+                           Style="{StaticResource placeHolder}"/>
 
                 <TextBox Grid.Row="4" Grid.Column="2"
                           HorizontalAlignment="Left"
-                     Text="Номер паспорта"
-                           Style="{StaticResource driversBox}"/>
+                     Tag="Номер паспорта"
+                         Text="{Binding PassportNum}"
+                           Style="{StaticResource placeHolder}"/>
 
                 <TextBox Grid.Row="5" Grid.Column="1"
-                     Text="Адрес регистрации"
-                           Style="{StaticResource driversBox}"/>
+                     Tag="Адрес регистрации"
+                     Text="{Binding Address}"
+                           Style="{StaticResource placeHolder}"/>
 
                 <TextBox Grid.Row="5" Grid.Column="2"
                           HorizontalAlignment="Left"

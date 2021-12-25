@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\
 TheBestProjectInTheWorld
 none
 false
 DEBUG;TRACE
-D:\Applications\GosAuto\TheBestProjectInTheWorld\App.xaml
-17-1675745032
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\App.xaml
+181298057642
 2445293121
-50-1582559549
-191365491228
-MainWindow.xaml;MVVM\View\CarsView.xaml;MVVM\View\CreateCarView.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\CreatorDtpView.xaml;MVVM\View\DriverCard.xaml;MVVM\View\DtpView.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\MainInformationPage.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingCardDrivers.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;Theme\RadioButtonsOnMainPage.xaml;
+491315830405
+191209659466
+MainWindow.xaml;MVVM\View\CarsView.xaml;MVVM\View\CreateCarView.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\CreatorDtpView.xaml;MVVM\View\DriverCard.xaml;MVVM\View\DtpView.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\MainInformationPage.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\ComboBoxTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;Theme\RadioButtonsOnMainPage.xaml;Theme\textBoxTheme.xaml;
 
 False
 

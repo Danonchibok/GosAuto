@@ -218,7 +218,6 @@ C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVV
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DriverCard.g.cs
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\LicencesListView.g.cs
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\PageAuth.g.cs
-C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingCardDrivers.g.cs
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingDrivers.g.cs
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\App.g.cs
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld_Content.g.cs
@@ -231,7 +230,6 @@ C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVV
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DriverCard.baml
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\LicencesListView.baml
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\PageAuth.baml
-C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingCardDrivers.baml
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\WatchingDrivers.baml
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\OnAuthPage.baml
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\TheBestProjectInTheWorld.g.resources
@@ -299,3 +297,14 @@ D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpV
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\RadioButtonsOnMainPage.baml
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.g.cs
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.baml
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\RadioButtonsOnMainPage.baml
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.g.cs
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.g.cs
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.g.cs
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.g.cs
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.baml
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.baml
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.baml
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.baml
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\ComboBoxTheme.baml
+C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\textBoxTheme.baml

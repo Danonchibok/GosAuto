@@ -8,6 +8,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/ComboBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/textBoxTheme.xaml"/>
                 <ResourceDictionary Source="Theme/RadioButtonsOnMainPage.xaml"/>
                 <ResourceDictionary Source="Theme/buttonsTheme.xaml"/>
                 <ResourceDictionary Source="Theme/OnMainPage.xaml"/>
