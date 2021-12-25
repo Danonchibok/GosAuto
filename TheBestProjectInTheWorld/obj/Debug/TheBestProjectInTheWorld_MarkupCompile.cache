@@ -4,30 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\
-=======
-C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\
->>>>>>> 82e147ea9517de8ff7692475841562b289304f8f
 TheBestProjectInTheWorld
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\App.xaml
 181298057642
 2445293121
 491315830405
 191209659466
 MainWindow.xaml;MVVM\View\CarsView.xaml;MVVM\View\CreateCarView.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\CreatorDtpView.xaml;MVVM\View\DriverCard.xaml;MVVM\View\DtpView.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\MainInformationPage.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\ComboBoxTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;Theme\RadioButtonsOnMainPage.xaml;Theme\textBoxTheme.xaml;
-=======
-C:\GosAuto\TheBestProjectInTheWorld\App.xaml
-17-1675745032
-2445293121
-50-1582559549
-19-327988458
-MainWindow.xaml;MVVM\View\CarsView.xaml;MVVM\View\CreateCarView.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\CreatorDtpView.xaml;MVVM\View\DriverCard.xaml;MVVM\View\DtpView.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\MainInformationPage.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingCardDrivers.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;Theme\RadioButtonsOnMainPage.xaml;
->>>>>>> 82e147ea9517de8ff7692475841562b289304f8f
 
 False
 

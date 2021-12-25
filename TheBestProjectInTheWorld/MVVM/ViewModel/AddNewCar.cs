@@ -177,10 +177,10 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 
         private void InitLists()
         {
-            EngineTypes = AutoContext.GetContext().EngineTypes.ToList();
-            Manufacturers = AutoContext.GetContext().Manufacturers.ToList();
-            TypeDrives = AutoContext.GetContext().TypeDrives.ToList();
-            Models = AutoContext.GetContext().Models.ToList();
+           // EngineTypes = AutoContext.GetContext().EngineTypes.ToList();
+            //Manufacturers = AutoContext.GetContext().Manufacturers.ToList();
+            //TypeDrives = AutoContext.GetContext().TypeDrives.ToList();
+            //Models = AutoContext.GetContext().Models.ToList();
         }
     }
 

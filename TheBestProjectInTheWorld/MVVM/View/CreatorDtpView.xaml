@@ -18,16 +18,14 @@
                 CornerRadius="25">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="45"/>
+             
 
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -35,9 +33,68 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" 
+                           Text="Виновный ДТП"
+                           Foreground="White"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"/>
+                <TextBox Grid.Row="1" Grid.Column="0"/>
+
+                <TextBlock Grid.Row="0" Grid.Column="1"
+                           Text="Участник ДТП"
+                           Foreground="White"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"/>
+                
                 <TextBox Grid.Row="1" Grid.Column="1"/>
-                <TextBox Grid.Row="2" Grid.Column="1"/>
+
+      
+                <TextBlock Grid.Row="2" Grid.Column="0"
+                           Text="Адрес"
+                           Foreground="White"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"/>
+
+                <TextBox Grid.Row="3" Grid.Column="0"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="1"
+                           Foreground="White"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"
+                            Text="Жертвы"/>
+
                 <TextBox Grid.Row="3" Grid.Column="1"/>
+
+                <TextBlock Text="Дата"
+                           Grid.Row="4" Grid.Column="0"
+                           Foreground="White"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"/>
+
+                <TextBox Grid.Row="5" Grid.Column="0"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="1"
+                           Foreground="White"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"
+                            Text="Комент"/>
+
+                <TextBox Grid.Row="5" Grid.Column="1"/>
+
+                <Button Grid.Row="6" Grid.Column="0"
+                        Height="40"
+                        Grid.ColumnSpan="2"
+                        Margin="0,32,0,-26"
+                        Content="Добавить фото"/>
+
+                <Image Grid.Row="1" Grid.Column="2"
+                        Width="255" Height="300"></Image>
             </Grid>
         </Border>
 
@@ -46,6 +103,7 @@
                     Margin="0 15 0 0">
 
             <Button Content="СОЗДАТЬ"
+                    
                     FontSize="16"
                     Background="White"
                     Foreground="Black"

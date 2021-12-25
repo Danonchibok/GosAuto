@@ -1,5 +1,4 @@
 ﻿
-<<<<<<< HEAD
 FC:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\App.xaml;;
 FC:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\MainWindow.xaml;;
 FC:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\MVVM\View\CarsView.xaml;;
@@ -15,20 +14,4 @@ FC:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\MVVM\View\Wa
 FC:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\Theme\ComboBoxTheme.xaml;;
 FC:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\Theme\OnAuthPage.xaml;;
 FC:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\Theme\textBoxTheme.xaml;;
-=======
-FC:\GosAuto\TheBestProjectInTheWorld\App.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MainWindow.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\CarsView.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\CreateCarView.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\CreateDrivers.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\CreatorDtpView.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\DriverCard.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\DtpView.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\LicencesListView.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\MainInformationPage.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\PageAuth.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\WatchingCardDrivers.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\MVVM\View\WatchingDrivers.xaml;;
-FC:\GosAuto\TheBestProjectInTheWorld\Theme\OnAuthPage.xaml;;
->>>>>>> 82e147ea9517de8ff7692475841562b289304f8f
 
