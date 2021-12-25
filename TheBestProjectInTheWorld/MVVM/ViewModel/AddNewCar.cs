@@ -124,7 +124,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 
         public AddNewCar()
         {
-            //InitLists();
+            InitLists();
 
             AddCommand = new RelayCommand(o =>
             {

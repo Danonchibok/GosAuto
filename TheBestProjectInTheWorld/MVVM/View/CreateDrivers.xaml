@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"  xmlns:viewmodel="clr-namespace:TheBestProjectInTheWorld.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:AddDriverViewModel}"
              d:DesignHeight="710" d:DesignWidth="1000">
     <StackPanel Orientation="Vertical"
                 Width="1000" Height="710">
@@ -88,22 +88,26 @@
                            Style="{StaticResource driversBox}"/>
 
                 <TextBox Grid.Row="6"  Grid.Column="1"
-                     Text="Место работы"
-                           Style="{StaticResource driversBox}"/>
+                     Tag="Место работы"
+                     Text="{Binding Company}"
+                           Style="{StaticResource placeHolder}"/>
 
                 <TextBox Grid.Row="6"  Grid.Column="2" 
                           HorizontalAlignment="Left"
-                     Text="Должность"
-                           Style="{StaticResource driversBox}"/>
+                     Tag="Должность"
+                     Text="{Binding JobName}"
+                           Style="{StaticResource placeHolder}"/>
 
                 <TextBox Grid.Row="7" Grid.Column="1"
-                     Text="Мобильный телефон"
-                           Style="{StaticResource driversBox}"/>
+                     Tag="Мобильный телефон"
+                     Text="{Binding Phone}"
+                           Style="{StaticResource placeHolder}"/>
 
                 <TextBox Grid.Row="7"  Grid.Column="2"
-                     Text="Email"
+                     Tag="Email"
+                     Text="{Binding Email}"
                          HorizontalAlignment="Left"
-                           Style="{StaticResource driversBox}"/>
+                           Style="{StaticResource placeHolder}"/>
 
                 <TextBox Grid.Row="8"  Grid.Column="0" Grid.ColumnSpan="3"
                      Text="Фотография"
@@ -124,6 +128,7 @@
                     FontSize="16"
                     Background="White"
                     Foreground="Black"
+                    Command="{Binding AddCommand}"
                      Style="{StaticResource 2buttons}"/>
         </StackPanel>
     </StackPanel>

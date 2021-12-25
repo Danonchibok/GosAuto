@@ -76,5 +76,27 @@ namespace TheBestProjectInTheWorld.Core
             }
             return message;
         }
+
+        public static string EditLicence(Licences licence)
+        {
+            string message = "Данные обновлены";
+            Licences oldLicence = AutoContext.GetContext().Licences.Where(l => l.id == licence.id).FirstOrDefault();
+           
+            if (licence.Statuses.id != oldLicence.Statuses.id)
+            {
+                ChangedStatusHistory changedStatusHistory = new ChangedStatusHistory()
+                {
+                    date = DateTime.Now,
+                    Licences = licence,
+                    Statuses = oldLicence.Statuses,
+                    Statuses1 = licence.Statuses,
+                    
+                };
+                AutoContext.GetContext().ChangedStatusHistory.Add(changedStatusHistory);
+
+            }
+            AutoContext.GetContext().SaveChanges();
+            return message;
+        }
     }
 }

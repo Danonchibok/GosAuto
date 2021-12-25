@@ -297,6 +297,7 @@ D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpV
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\RadioButtonsOnMainPage.baml
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.g.cs
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.baml
+<<<<<<< HEAD
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\RadioButtonsOnMainPage.baml
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.g.cs
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.g.cs
@@ -308,3 +309,14 @@ C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVV
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.baml
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\ComboBoxTheme.baml
 C:\Users\is18-6\Downloads\GosAuto\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\textBoxTheme.baml
+=======
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\RadioButtonsOnMainPage.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.g.cs
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.g.cs
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.g.cs
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.g.cs
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CarsView.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreateCarView.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\CreatorDtpView.baml
+C:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DtpView.baml
+>>>>>>> 82e147ea9517de8ff7692475841562b289304f8f

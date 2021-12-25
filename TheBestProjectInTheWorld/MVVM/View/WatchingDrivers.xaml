@@ -60,9 +60,9 @@
                             </StackPanel>
 
                                 <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                    <TextBlock Text="{Binding companyId, StringFormat={}Компания: {0}}"
+                                    <TextBlock Text="{Binding Companies.company, StringFormat={}Компания: {0}}"
                                                Margin=" 0 0 15 0"/>
-                                    <TextBlock Text="{Binding jobId, StringFormat={}Должность: {0}}"/>
+                                    <TextBlock Text="{Binding Jobs.jobname, StringFormat={}Должность: {0}}"/>
                                 </StackPanel>
                         </StackPanel>
                     </DataTemplate>
