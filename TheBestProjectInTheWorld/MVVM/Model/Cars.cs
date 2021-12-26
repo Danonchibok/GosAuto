@@ -14,6 +14,12 @@ namespace TheBestProjectInTheWorld.MVVM.Model
     
     public partial class Cars
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Cars()
+        {
+            this.CarsAccindent = new HashSet<CarsAccindent>();
+        }
+    
         public int id { get; set; }
         public string VIN { get; set; }
         public Nullable<double> Year { get; set; }
@@ -30,5 +36,7 @@ namespace TheBestProjectInTheWorld.MVVM.Model
         public virtual Manufacturers Manufacturers { get; set; }
         public virtual Models Models { get; set; }
         public virtual TypeDrives TypeDrives { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CarsAccindent> CarsAccindent { get; set; }
     }
 }

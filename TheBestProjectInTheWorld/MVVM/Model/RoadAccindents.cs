@@ -26,7 +26,11 @@ namespace TheBestProjectInTheWorld.MVVM.Model
         public string address { get; set; }
         public System.DateTime date { get; set; }
         public int CountOfVictims { get; set; }
+<<<<<<< HEAD
         public string ImgSchema { get; set; }
+=======
+        public string imgSchema { get; set; }
+>>>>>>> c99dee2a3feb59029e37718833d3ce5688c7bac9
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CarsAccindent> CarsAccindent { get; set; }

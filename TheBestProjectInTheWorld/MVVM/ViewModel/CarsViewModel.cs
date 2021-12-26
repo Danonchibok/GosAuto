@@ -31,7 +31,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 
         public CarsViewModel()
         {
-            //Cars = new ObservableCollection<Cars>(AutoContext.GetContext().Cars.ToList());
+            Cars = new ObservableCollection<Cars>(AutoContext.GetContext().Cars.ToList());
             CarsVeiwCommand = new RelayCommand(o =>
             {
                 AddNewCarVM = new AddNewCar();

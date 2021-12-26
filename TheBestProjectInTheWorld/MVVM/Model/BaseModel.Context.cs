@@ -26,10 +26,13 @@ namespace TheBestProjectInTheWorld.MVVM.Model
         }
     
         public virtual DbSet<Cars> Cars { get; set; }
+        public virtual DbSet<CarsAccindent> CarsAccindent { get; set; }
         public virtual DbSet<ChangedDriversHistory> ChangedDriversHistory { get; set; }
         public virtual DbSet<ChangedStatusHistory> ChangedStatusHistory { get; set; }
+        public virtual DbSet<Classifications> Classifications { get; set; }
         public virtual DbSet<Companies> Companies { get; set; }
         public virtual DbSet<Drivers> Drivers { get; set; }
+        public virtual DbSet<driversAccindet> driversAccindet { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<EngineTypes> EngineTypes { get; set; }
         public virtual DbSet<Jobs> Jobs { get; set; }
@@ -37,6 +40,7 @@ namespace TheBestProjectInTheWorld.MVVM.Model
         public virtual DbSet<Manufacturers> Manufacturers { get; set; }
         public virtual DbSet<Models> Models { get; set; }
         public virtual DbSet<Positions> Positions { get; set; }
+        public virtual DbSet<RoadAccindents> RoadAccindents { get; set; }
         public virtual DbSet<Statuses> Statuses { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TypeDrives> TypeDrives { get; set; }
