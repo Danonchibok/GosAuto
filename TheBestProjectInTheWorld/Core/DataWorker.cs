@@ -98,5 +98,23 @@ namespace TheBestProjectInTheWorld.Core
             AutoContext.GetContext().SaveChanges();
             return message;
         }
+
+        public static string AddNewDtp(RoadAccindents roadAccindent, List<driversAccindet> driversAccindets, List<CarsAccindent> carsAccindents)
+        {
+            string message = "Добавлено";
+            foreach (driversAccindet item in driversAccindets)
+            {
+                item.RoadAccindents = roadAccindent;
+                AutoContext.GetContext().driversAccindet.Add(item);
+            }
+            foreach (CarsAccindent item in carsAccindents)
+            {
+                item.RoadAccindents = roadAccindent;
+                AutoContext.GetContext().CarsAccindent.Add(item);
+            }
+            AutoContext.GetContext().RoadAccindents.Add(roadAccindent);
+            AutoContext.GetContext().SaveChanges();
+            return message;
+        }
     }
 }

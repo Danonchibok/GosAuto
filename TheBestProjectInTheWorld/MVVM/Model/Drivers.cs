@@ -20,6 +20,7 @@ namespace TheBestProjectInTheWorld.MVVM.Model
             this.Cars = new HashSet<Cars>();
             this.ChangedDriversHistory = new HashSet<ChangedDriversHistory>();
             this.ChangedDriversHistory1 = new HashSet<ChangedDriversHistory>();
+            this.driversAccindet = new HashSet<driversAccindet>();
         }
     
         public int id { get; set; }
@@ -47,5 +48,7 @@ namespace TheBestProjectInTheWorld.MVVM.Model
         public virtual Companies Companies { get; set; }
         public virtual Jobs Jobs { get; set; }
         public virtual Licences Licences { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<driversAccindet> driversAccindet { get; set; }
     }
 }
