@@ -336,3 +336,5 @@ E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\LicencesListView.baml
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\MainInformationPage.baml
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\ComboBoxTheme.baml
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\textBoxTheme.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\ComboBoxTheme.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\textBoxTheme.baml
