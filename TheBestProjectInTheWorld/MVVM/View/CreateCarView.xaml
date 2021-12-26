@@ -27,10 +27,6 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
 
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -52,10 +48,8 @@
                 <TextBox Grid.Row="2" Grid.Column="3" Text="Модель"
                          Style="{StaticResource carsViewTheme}"/>
 
-                <TextBox Grid.Row="3" Grid.Column="1" Text="Тип ТС" 
-                         Style="{StaticResource carsViewTheme}"/>
-                <TextBox Grid.Row="3" Grid.Column="3" Text="Категория ТС" 
-                         Style="{StaticResource carsViewTheme}"/>
+              
+               
                 <ComboBox Grid.Row="4"  Grid.Column="5"
                          Style="{StaticResource ComboBoxFlatStyle}">
                     <TextBlock Text="Красный"/>
@@ -72,36 +66,35 @@
                 <TextBox Grid.Row="4" Grid.Column="3" Text="Номер цвет" 
                          Style="{StaticResource carsViewTheme}"/>
 
-                <TextBox Grid.Row="5" Grid.Column="1" Text="Номер двигателя" 
-                         Style="{StaticResource carsViewTheme}"/>
-                <TextBox Grid.Row="5" Grid.Column="3" Text="Модель двигателя"
+             
+                <ComboBox Grid.Row="5" Grid.Column="3" Text="Модель двигателя"
+                         Style="{StaticResource ComboBoxFlatStyle}">
+                    
+                </ComboBox>
+
+                <!--<TextBox Grid.Row="5" Grid.Column="3" Text="Модель двигателя"
+                         Style="{StaticResource carsViewTheme}"/>-->
+
+            
+
+                <TextBox Grid.Row="6" Grid.Column="1" Text="Год двигателя" 
                          Style="{StaticResource carsViewTheme}"/>
 
-                <TextBox Grid.Row="6" Grid.Column="1" Text="Мощность двигателя в кВт"
+                <TextBox Grid.Row="5" Grid.Column="1" Text="Максимальная нагрузка(в кг)"
                          Style="{StaticResource carsViewTheme}"/>
-                <TextBox Grid.Row="6" Grid.Column="3" Text="Мощность в лошадинных силах"
+              
+
+             
+                <TextBox Grid.Row="6" Grid.Column="3" Text="Тип двигателя"
                          Style="{StaticResource carsViewTheme}"/>
 
-                <TextBox Grid.Row="7" Grid.Column="1" Text="Год двигателя" 
+                <TextBox Grid.Row="3" Grid.Column="1" Text="Вес автомобиля(в кг)"
                          Style="{StaticResource carsViewTheme}"/>
-
-                <TextBox Grid.Row="8" Grid.Column="1" Text="Максимальная нагрузка(в кг)"
-                         Style="{StaticResource carsViewTheme}"/>
-                <TextBox Grid.Row="8" Grid.Column="3" Text="Мощность в лошадинных силах"
-                         Style="{StaticResource carsViewTheme}"/>
-
-                <TextBox Grid.Row="9" Grid.Column="1" Text="Вес автомобиля"
-                         Style="{StaticResource carsViewTheme}"/>
-                <TextBox Grid.Row="9" Grid.Column="3" Text="Тип двигателя"
-                         Style="{StaticResource carsViewTheme}"/>
-
-                <TextBox Grid.Row="10" Grid.Column="1" Text="Вес автомобиля(в кг)"
-                         Style="{StaticResource carsViewTheme}"/>
-                <TextBox Grid.Row="10" Grid.Column="3" Text="Тип привода"
+                <TextBox Grid.Row="3" Grid.Column="3" Text="Тип привода"
                          Style="{StaticResource carsViewTheme}"/>
 
 
-                <TextBox Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="3" 
+                <TextBox Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" 
                          Text="Комментарии"
                          Style="{StaticResource carsViewTheme}"/>
 

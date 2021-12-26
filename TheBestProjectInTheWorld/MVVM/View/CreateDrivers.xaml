@@ -27,7 +27,6 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
-                    <RowDefinition/>
 
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -46,10 +45,6 @@
                     <Image Source="{Binding Photo}"/>
                 </Border>
 
-                <TextBox Grid.Row="0" Grid.Column="1"
-                     Style="{StaticResource placeHolder}"
-                         Text=""
-                         Tag="111 Идентификатор GUID"/>
                      
 
                 <TextBox Grid.Row="1" Grid.Column="1"
@@ -62,61 +57,56 @@
                      Text="{Binding Name}"
                            Style="{StaticResource placeHolder}"/>
 
-                <TextBox Grid.Row="3"  Grid.Column="1"
-                     Text="111 Отчество"
-                           Style="{StaticResource driversBox}"/>
+     
 
-                <TextBox Grid.Row="4" Grid.Column="1"
+                <TextBox Grid.Row="3" Grid.Column="1"
                      Tag="Серия паспорта"
                      Text="{Binding PassportSerial}"
                            Style="{StaticResource placeHolder}"/>
 
-                <TextBox Grid.Row="4" Grid.Column="2"
+                <TextBox Grid.Row="3" Grid.Column="2"
                           HorizontalAlignment="Left"
                      Tag="Номер паспорта"
                          Text="{Binding PassportNum}"
                            Style="{StaticResource placeHolder}"/>
 
-                <TextBox Grid.Row="5" Grid.Column="1"
-                     Tag="Адрес регистрации"
-                     Text="{Binding Address}"
-                           Style="{StaticResource placeHolder}"/>
+                <TextBox Grid.Row="2" Grid.Column="2"
+                         Tag="Адрес регистрации"
+                         HorizontalAlignment="Left"
+                         Text="{Binding Address}"
+                         Style="{StaticResource placeHolder}"/>
 
-                <TextBox Grid.Row="5" Grid.Column="2"
-                          HorizontalAlignment="Left"
-                     Text="Адрес проживания"
-                           Style="{StaticResource driversBox}"/>
 
-                <TextBox Grid.Row="6"  Grid.Column="1"
+
+                <TextBox Grid.Row="4"  Grid.Column="1"
                      Tag="Место работы"
                      Text="{Binding Company}"
                            Style="{StaticResource placeHolder}"/>
 
-                <TextBox Grid.Row="6"  Grid.Column="2" 
+                <TextBox Grid.Row="4"  Grid.Column="2" 
                           HorizontalAlignment="Left"
                      Tag="Должность"
                      Text="{Binding JobName}"
                            Style="{StaticResource placeHolder}"/>
 
-                <TextBox Grid.Row="7" Grid.Column="1"
+                <TextBox Grid.Row="5" Grid.Column="1"
                      Tag="Мобильный телефон"
                      Text="{Binding Phone}"
                            Style="{StaticResource placeHolder}"/>
 
-                <TextBox Grid.Row="7"  Grid.Column="2"
+                <TextBox Grid.Row="5"  Grid.Column="2"
                      Tag="Email"
                      Text="{Binding Email}"
                          HorizontalAlignment="Left"
                            Style="{StaticResource placeHolder}"/>
 
-                <TextBox Grid.Row="8"  Grid.Column="0" Grid.ColumnSpan="3"
-                     Text="Фотография"
-                           Style="{StaticResource driversBox}"/>
-
-                <TextBox Grid.Row="9" Grid.Column="0"  Grid.ColumnSpan="3"
-                     Text="Замечания"
-                     Width="700"
-                           Style="{StaticResource driversBox}"/>
+                <Button Grid.Row="7"  Grid.Column="0" Grid.ColumnSpan="3"
+                        Content="Добавить фото"
+                        Height="40"
+                        Background="White"
+                        Width="700"
+                        Style="{StaticResource dtpBut}"
+                        Command="{Binding LoadImgCommand}"></Button>
             </Grid>
         </Border>
 
@@ -130,8 +120,6 @@
                     Foreground="Black"
                     Command="{Binding AddCommand}"
                      Style="{StaticResource 2buttons}"/>
-            <Button Content="img load"
-                    Command="{Binding LoadImgCommand}"></Button>
         </StackPanel>
     </StackPanel>
 </UserControl>

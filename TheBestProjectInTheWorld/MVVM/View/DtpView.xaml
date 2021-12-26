@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
+             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View" xmlns:viewmodel="clr-namespace:TheBestProjectInTheWorld.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:DtpViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="650" d:DesignWidth="1000">
     <StackPanel Orientation="Vertical" 
@@ -26,11 +26,21 @@
                       FontSize="17"
                           Background="Transparent"
                           Width="910"
-                          BorderThickness="1">
+                          BorderThickness="1"
+                      ItemsSource="{Binding RoadAccindents}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal" >
-
+                        <StackPanel Orientation="Horizontal" Margin="0 15 0 5">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Classifications.name, StringFormat={}Классификация: {0}}"
+                                                        Margin="0 0 35 5"/>
+                                    <TextBlock Text="{Binding address, StringFormat={}Адрес: {0}}"
+                                               Margin=" 0 0 35 0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding CountOfVictims, StringFormat={}Количетсов жертв: {0}}"
+                                               Margin=" 0 0 35 0"/>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

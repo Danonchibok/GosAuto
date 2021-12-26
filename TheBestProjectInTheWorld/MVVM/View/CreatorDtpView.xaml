@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
+             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View" xmlns:viewmodel="clr-namespace:TheBestProjectInTheWorld.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:CreatorDtpViewModel}"
              mc:Ignorable="d" 
                          d:DesignHeight="710" d:DesignWidth="1000">
     <StackPanel Orientation="Vertical"
                 Width="1000" Height="710">
+        
         <TextBlock Text="Конструктор ДТП"
                    FontSize="30"
                    Foreground="White"
@@ -16,97 +17,95 @@
         <Border Height="550"
                 Background="#1B2B4E"
                 CornerRadius="25">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="45"/>
-             
 
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="40"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="20"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="1" 
-                           Text="Виновный ДТП"
-                           Foreground="White"
-                           FontSize="16"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Bottom"/>
-                <TextBox Grid.Row="1" Grid.Column="3"
-                         Style="{StaticResource carsView1}"/>
 
-                <TextBlock Grid.Row="0" Grid.Column="3"
-                           Text="Участник ДТП"
-                           Foreground="White"
-                           FontSize="16"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Bottom"/>
-                
-                <TextBox Grid.Row="1" Grid.Column="1"
-                         Style="{StaticResource carsView1}"/>
 
-      
-                <TextBlock Grid.Row="2" Grid.Column="1"
-                           Text="Адрес"
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical"
+                                Margin="0 0 5 0"
+                                Width="250">
+
+                        <Button Height="30" 
+                                Foreground="Black"
+                                Background="White"
+                                Content="Добавление водителей"
+                                Style="{StaticResource dtpBut}"
+                                Command="{Binding AddDriverCommand}"/>
+
+                        <TextBlock Text="Адрес"
                            Foreground="White"
                            FontSize="16"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Bottom"/>
 
-                <TextBox Grid.Row="3" Grid.Column="1"
-                         Style="{StaticResource carsView1}"/>
+                        <TextBox Style="{StaticResource carsView1}" Height="45"/>
 
-                <TextBlock Grid.Row="2" Grid.Column="3"
+                        <TextBlock Text="Дата"
                            Foreground="White"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"/>
+
+                        <TextBox Style="{StaticResource carsView1}" Height="45"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Width="250" Margin="5 0 0 0">
+                        <Button Height="30" 
+                                Foreground="Black"
+                                Background="White"
+                                Content="Добавление машин"
+                                Style="{StaticResource dtpBut}"
+                                Command="{Binding AddCarCommand }"/>
+                        
+                        <TextBlock Foreground="White"
                            FontSize="16"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Bottom"
                             Text="Жертвы"/>
 
-                <TextBox Grid.Row="3" Grid.Column="3"
-                         Style="{StaticResource carsView1}"/>
+                        <TextBox Style="{StaticResource carsView1}" Height="45"/>
 
-                <TextBlock Text="Дата"
-                           Grid.Row="4" Grid.Column="1"
-                           Foreground="White"
-                           FontSize="16"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Bottom"/>
-
-                <TextBox Grid.Row="5" Grid.Column="1"
-                         Style="{StaticResource carsView1}"/>
-
-                <TextBlock Grid.Row="4" Grid.Column="3"
-                           Foreground="White"
+                        <TextBlock Foreground="White"
                            FontSize="16"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Bottom"
-                            Text="Комент"/>
+                           Text="Комент"/>
 
-                <TextBox Grid.Row="5" Grid.Column="3"
-                         Style="{StaticResource carsView1}"/>
-
-                <Button Grid.Row="6" Grid.Column="1"
-                        Height="40"
-                        Grid.ColumnSpan="3"
-                        Margin="0,32,0,-26"
+                        <TextBox Style="{StaticResource carsView1}" Height="45"/>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Vertical"
+                                Margin="10 0 0 0">
+                        <!--<Image Width="255" Height="200"></Image>-->
+                        <ContentControl Content="{Binding CurrentView}">
+                            
+                        </ContentControl>
+                    </StackPanel>
+                    <!--zdes knopka-->
+                    
+                </StackPanel>
+                <!--<Button Height="40"
+                        Margin="0 15 0 0"
                         Foreground="Black"
                         Background="White"
                         Content="Добавить фото"
-                        Style="{StaticResource dtpBut}"/>
+                        Style="{StaticResource dtpBut}"
+                        Width="510"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"/>-->
+                <StackPanel Margin="0 30 0 0"
+                            HorizontalAlignment="Center">
+                    <InkCanvas Height="200"
+                               Width="400">
+                    
+                    </InkCanvas>
+                </StackPanel>
+            </StackPanel>
+                
 
-                <Image Grid.Row="1" Grid.Column="4"
-                        Width="255" Height="270"></Image>
-            </Grid>
+
         </Border>
 
         <StackPanel Orientation="Horizontal"

@@ -15,6 +15,14 @@
     <Property Name="ModelId" Type="int" />
     <Property Name="driverId" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="CarsAccindent">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="carsAccindentId" Type="int" Nullable="false" />
+    <Property Name="accindentId" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="ChangedDriversHistory">
     <Key>
       <PropertyRef Name="Id" />
@@ -33,6 +41,13 @@
     <Property Name="changedFromStatusID" Type="int" Nullable="false" />
     <Property Name="changedToStatusId" Type="int" Nullable="false" />
     <Property Name="date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Classifications">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Companies">
     <Key>
@@ -60,6 +75,14 @@
     <Property Name="companyId" Type="int" />
     <Property Name="jobId" Type="int" />
     <Property Name="licenceId" Type="int" />
+  </EntityType>
+  <EntityType Name="driversAccindet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="driverId" Type="int" Nullable="false" />
+    <Property Name="accindentId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Employees">
     <Key>
@@ -117,6 +140,17 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoadAccindents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="classId" Type="int" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="CountOfVictims" Type="int" Nullable="false" />
+    <Property Name="imgSchema" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Statuses">
     <Key>
@@ -199,6 +233,30 @@
       </Principal>
       <Dependent Role="Cars">
         <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CarsAccindent_Cars">
+    <End Role="Cars" Type="Self.Cars" Multiplicity="1" />
+    <End Role="CarsAccindent" Type="Self.CarsAccindent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cars">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CarsAccindent">
+        <PropertyRef Name="carsAccindentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CarsAccindent_RoadAccindents">
+    <End Role="RoadAccindents" Type="Self.RoadAccindents" Multiplicity="1" />
+    <End Role="CarsAccindent" Type="Self.CarsAccindent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoadAccindents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CarsAccindent">
+        <PropertyRef Name="accindentId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -298,6 +356,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_driversAccindet_Drivers">
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="1" />
+    <End Role="driversAccindet" Type="Self.driversAccindet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="driversAccindet">
+        <PropertyRef Name="driverId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_driversAccindet_RoadAccindents">
+    <End Role="RoadAccindents" Type="Self.RoadAccindents" Multiplicity="1" />
+    <End Role="driversAccindet" Type="Self.driversAccindet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoadAccindents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="driversAccindet">
+        <PropertyRef Name="accindentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Employees_Positions">
     <End Role="Positions" Type="Self.Positions" Multiplicity="1" />
     <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
@@ -322,12 +404,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_RoadAccindents_Classifications">
+    <End Role="Classifications" Type="Self.Classifications" Multiplicity="1" />
+    <End Role="RoadAccindents" Type="Self.RoadAccindents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classifications">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="RoadAccindents">
+        <PropertyRef Name="classId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Хранилище GosAutoModelContainer">
     <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarsAccindent" EntityType="Self.CarsAccindent" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChangedDriversHistory" EntityType="Self.ChangedDriversHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChangedStatusHistory" EntityType="Self.ChangedStatusHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Classifications" EntityType="Self.Classifications" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Drivers" EntityType="Self.Drivers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="driversAccindet" EntityType="Self.driversAccindet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EngineTypes" EntityType="Self.EngineTypes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
@@ -335,6 +432,7 @@
     <EntitySet Name="Manufacturers" EntityType="Self.Manufacturers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Models" EntityType="Self.Models" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Positions" EntityType="Self.Positions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoadAccindents" EntityType="Self.RoadAccindents" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Statuses" EntityType="Self.Statuses" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeDrives" EntityType="Self.TypeDrives" Schema="dbo" store:Type="Tables" />
@@ -357,6 +455,14 @@
     <AssociationSet Name="FK_Cars_TypeDrives" Association="Self.FK_Cars_TypeDrives">
       <End Role="TypeDrives" EntitySet="TypeDrives" />
       <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CarsAccindent_Cars" Association="Self.FK_CarsAccindent_Cars">
+      <End Role="Cars" EntitySet="Cars" />
+      <End Role="CarsAccindent" EntitySet="CarsAccindent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CarsAccindent_RoadAccindents" Association="Self.FK_CarsAccindent_RoadAccindents">
+      <End Role="RoadAccindents" EntitySet="RoadAccindents" />
+      <End Role="CarsAccindent" EntitySet="CarsAccindent" />
     </AssociationSet>
     <AssociationSet Name="FK_ChangedDriversHistory_Drivers" Association="Self.FK_ChangedDriversHistory_Drivers">
       <End Role="Drivers" EntitySet="Drivers" />
@@ -390,6 +496,14 @@
       <End Role="Licences" EntitySet="Licences" />
       <End Role="Drivers" EntitySet="Drivers" />
     </AssociationSet>
+    <AssociationSet Name="FK_driversAccindet_Drivers" Association="Self.FK_driversAccindet_Drivers">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="driversAccindet" EntitySet="driversAccindet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_driversAccindet_RoadAccindents" Association="Self.FK_driversAccindet_RoadAccindents">
+      <End Role="RoadAccindents" EntitySet="RoadAccindents" />
+      <End Role="driversAccindet" EntitySet="driversAccindet" />
+    </AssociationSet>
     <AssociationSet Name="FK_Employees_Positions" Association="Self.FK_Employees_Positions">
       <End Role="Positions" EntitySet="Positions" />
       <End Role="Employees" EntitySet="Employees" />
@@ -397,6 +511,10 @@
     <AssociationSet Name="FK_Licences_Statuses" Association="Self.FK_Licences_Statuses">
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Licences" EntitySet="Licences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoadAccindents_Classifications" Association="Self.FK_RoadAccindents_Classifications">
+      <End Role="Classifications" EntitySet="Classifications" />
+      <End Role="RoadAccindents" EntitySet="RoadAccindents" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

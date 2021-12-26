@@ -338,3 +338,9 @@ E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\ComboBoxTheme.baml
 E:\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\textBoxTheme.baml
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\ComboBoxTheme.baml
 D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\Theme\textBoxTheme.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DriverView.g.cs
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\DriverView.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\AddCarAccidentView.g.cs
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\AddDriverAccidentView.g.cs
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\AddCarAccidentView.baml
+D:\Applications\GosAuto\TheBestProjectInTheWorld\obj\Debug\MVVM\View\AddDriverAccidentView.baml

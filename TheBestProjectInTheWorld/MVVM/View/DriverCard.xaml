@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
+             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View" xmlns:viewmodel="clr-namespace:TheBestProjectInTheWorld.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:AddNewLicence}"
              mc:Ignorable="d" 
              d:DesignHeight="710" d:DesignWidth="1000">
     <StackPanel Orientation="Vertical"
@@ -27,20 +27,22 @@
                                    FontSize="16" 
                                    Margin="0 0 0 10"
                                    HorizontalAlignment="Center"/>
-                        <TextBox Width="130"
+                        <TextBox Width="230"
                                  Height="30" 
-                                 Style="{StaticResource LincenceView}"/>
+                                 Style="{StaticResource LincenceView}"
+                                 Text="{Binding LicenceDate}"/>
 
                     </StackPanel>
                     <StackPanel Orientation="Vertical" >
-                        <TextBlock Text="Дата создания" 
+                        <TextBlock Text="Дата окончания" 
                                    Foreground="White"
                                    FontSize="16" 
                                    Margin="0 0 0 10"
                                    HorizontalAlignment="Center"/>
-                        <TextBox Width="130"
+                        <TextBox Width="230"
                                  Height="30"
-                                 Style="{StaticResource LincenceView}"/>
+                                 Style="{StaticResource LincenceView}"
+                                 Text="{Binding ExpireDate}"/>
 
                     </StackPanel>
 
@@ -53,9 +55,10 @@
                                    FontSize="16" 
                                    Margin="0 0 0 10"
                                    HorizontalAlignment="Center"/>
-                        <TextBox Width="130"
+                        <TextBox Width="230"
                                  Height="30"
-                                 Style="{StaticResource LincenceView}"/>
+                                 Style="{StaticResource LincenceView}"
+                                 Text="{Binding Categories}"/>
 
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="0 15 0 0">
@@ -64,13 +67,13 @@
                                    FontSize="16" 
                                    Margin="0 0 0 10"
                                    HorizontalAlignment="Center"/>
-                        <ComboBox Width="130"
+                        
+                        <ComboBox Width="230"
                                   Height="30"
-                                  Style="{StaticResource ComboBoxLicence}">
-                            <TextBlock Text="Активен"/>
-                            <TextBlock Text="Утратил силу"/>
-                            <TextBlock Text="Приостановлен"/>
-                            <TextBlock Text="Изъят"/>
+                                  Style="{StaticResource ComboBoxLicence}"
+                                  SelectedItem="{Binding Status}"
+                                  ItemsSource="{Binding Statuses}"
+                                  DisplayMemberPath="StatusName">
                         </ComboBox>
 
                     </StackPanel>
@@ -84,9 +87,10 @@
                                    FontSize="16" 
                                    Margin="0 0 0 10"
                                    HorizontalAlignment="Center"/>
-                        <TextBox Width="130"
+                        <TextBox Width="230"
                                  Height="30"
-                                 Style="{StaticResource LincenceView}"/>
+                                 Style="{StaticResource LincenceView}"
+                                 Text="{Binding LicenceSeries}"/>
 
                     </StackPanel>
                     <StackPanel Orientation="Vertical" >
@@ -95,9 +99,10 @@
                                    FontSize="16" 
                                    Margin="0 0 0 10"
                                    HorizontalAlignment="Center"/>
-                        <TextBox Width="130"
+                        <TextBox Width="230"
                                  Height="30"
-                                 Style="{StaticResource LincenceView}"/>
+                                 Style="{StaticResource LincenceView}"
+                                 Text="{Binding LicenceNumber}"/>
 
                     </StackPanel>
 
@@ -115,7 +120,8 @@
                     FontSize="16"
                     Background="White"
                     Foreground="Black"
-                     Style="{StaticResource 2buttons}"/>
+                     Style="{StaticResource 2buttons}"
+                    Command="{Binding AddCommand}"/>
         </StackPanel>
     </StackPanel>
 </UserControl>

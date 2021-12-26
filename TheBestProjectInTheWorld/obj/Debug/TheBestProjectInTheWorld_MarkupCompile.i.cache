@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Applications\GosAuto\TheBestProjectInTheWorld\App.xaml
-181298057642
+202097625308
 2445293121
-50-2011209830
+58-89394933
 191365491228
-MainWindow.xaml;MVVM\View\CarsView.xaml;MVVM\View\CreateCarView.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\CreatorDtpView.xaml;MVVM\View\DriverCard.xaml;MVVM\View\DtpView.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\MainInformationPage.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\ComboBoxTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;Theme\RadioButtonsOnMainPage.xaml;Theme\textBoxTheme.xaml;
+MainWindow.xaml;MVVM\View\AddCarAccidentView.xaml;MVVM\View\AddDriverAccidentView.xaml;MVVM\View\CarsView.xaml;MVVM\View\CreateCarView.xaml;MVVM\View\CreateDrivers.xaml;MVVM\View\CreatorDtpView.xaml;MVVM\View\DriverCard.xaml;MVVM\View\DtpView.xaml;MVVM\View\LicencesListView.xaml;MVVM\View\MainInformationPage.xaml;MVVM\View\PageAuth.xaml;MVVM\View\WatchingDrivers.xaml;Theme\buttonsTheme.xaml;Theme\ComboBoxTheme.xaml;Theme\OnAuthPage.xaml;Theme\onCreateDriversPage.xaml;Theme\OnMainPage.xaml;Theme\RadioButtonsOnMainPage.xaml;Theme\textBoxTheme.xaml;
 
 False
 

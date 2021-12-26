@@ -32,6 +32,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
         public LicencesListViewModel()
         {
             Licences = new ObservableCollection<Licences>(AutoContext.GetContext().Licences.ToList());
+
             AddNewLicenceCommand = new RelayCommand(o =>
             {
                 AddNewLicenceVM = new AddNewLicence();

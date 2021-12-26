@@ -177,6 +177,9 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
 
         private void InitLists()
         {
+
+            //Модель двигателя, Производитель, тип привода, модель
+
             EngineTypes = AutoContext.GetContext().EngineTypes.ToList();
             Manufacturers = AutoContext.GetContext().Manufacturers.ToList();
             TypeDrives = AutoContext.GetContext().TypeDrives.ToList();

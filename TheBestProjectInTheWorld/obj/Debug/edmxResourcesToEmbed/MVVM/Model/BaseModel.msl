@@ -17,6 +17,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CarsAccindent">
+      <EntityTypeMapping TypeName="GosAutoModel.CarsAccindent">
+        <MappingFragment StoreEntitySet="CarsAccindent">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="carsAccindentId" ColumnName="carsAccindentId" />
+          <ScalarProperty Name="accindentId" ColumnName="accindentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ChangedDriversHistory">
       <EntityTypeMapping TypeName="GosAutoModel.ChangedDriversHistory">
         <MappingFragment StoreEntitySet="ChangedDriversHistory">
@@ -35,6 +44,14 @@
           <ScalarProperty Name="changedFromStatusID" ColumnName="changedFromStatusID" />
           <ScalarProperty Name="changedToStatusId" ColumnName="changedToStatusId" />
           <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classifications">
+      <EntityTypeMapping TypeName="GosAutoModel.Classifications">
+        <MappingFragment StoreEntitySet="Classifications">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -64,6 +81,15 @@
           <ScalarProperty Name="companyId" ColumnName="companyId" />
           <ScalarProperty Name="jobId" ColumnName="jobId" />
           <ScalarProperty Name="licenceId" ColumnName="licenceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="driversAccindet">
+      <EntityTypeMapping TypeName="GosAutoModel.driversAccindet">
+        <MappingFragment StoreEntitySet="driversAccindet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="driverId" ColumnName="driverId" />
+          <ScalarProperty Name="accindentId" ColumnName="accindentId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -128,6 +154,18 @@
         <MappingFragment StoreEntitySet="Positions">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoadAccindents">
+      <EntityTypeMapping TypeName="GosAutoModel.RoadAccindents">
+        <MappingFragment StoreEntitySet="RoadAccindents">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="classId" ColumnName="classId" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="CountOfVictims" ColumnName="CountOfVictims" />
+          <ScalarProperty Name="imgSchema" ColumnName="imgSchema" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

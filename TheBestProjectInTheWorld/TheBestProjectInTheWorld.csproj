@@ -85,6 +85,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\AddCarAccidentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\AddDriverAccidentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\CarsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,16 +181,25 @@
     <Compile Include="MVVM\Model\Cars.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\Model\CarsAccindent.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\Model\ChangedDriversHistory.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MVVM\Model\ChangedStatusHistory.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\Model\Classifications.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\Model\Companies.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MVVM\Model\Drivers.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Model\driversAccindet.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MVVM\Model\Employees.cs">
@@ -206,6 +223,9 @@
     <Compile Include="MVVM\Model\Positions.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\Model\RoadAccindents.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\Model\Statuses.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
@@ -215,6 +235,8 @@
     <Compile Include="MVVM\Model\TypeDrives.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\ViewModel\AddCarAccidentViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\AddDriverAccidentViewModel.cs" />
     <Compile Include="MVVM\ViewModel\AddDriverViewModel.cs" />
     <Compile Include="MVVM\ViewModel\AddNewCar.cs" />
     <Compile Include="MVVM\ViewModel\AddNewLicence.cs" />
@@ -226,6 +248,12 @@
     <Compile Include="MVVM\ViewModel\LicencesListViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainInfoPageViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\View\AddCarAccidentView.xaml.cs">
+      <DependentUpon>AddCarAccidentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\AddDriverAccidentView.xaml.cs">
+      <DependentUpon>AddDriverAccidentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\CarsView.xaml.cs">
       <DependentUpon>CarsView.xaml</DependentUpon>
     </Compile>
@@ -502,6 +530,8 @@
     <Resource Include="Images\Drivers\198-kiss.png" />
     <Resource Include="Images\Drivers\199-angry.png" />
     <Resource Include="Images\Drivers\200-sleepy.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="MVVM\Model\BaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BaseModel.edmx</DependentUpon>

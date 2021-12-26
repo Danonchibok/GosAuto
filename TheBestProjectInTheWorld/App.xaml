@@ -57,6 +57,13 @@
                 <view:CreateCarView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:AddCarAccidentViewModel}">
+                <view:AddCarAccidentView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:AddDriverAccidentViewModel}">
+                <view:AddDriverAccidentView/>
+            </DataTemplate>
             <BooleanToVisibilityConverter x:Key="BoolToVis"/>
         </ResourceDictionary>
     </Application.Resources>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище GosAutoModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище GosAutoModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cars">
           <Key>
             <PropertyRef Name="id" />
@@ -522,7 +522,8 @@
             <End Role="RoadAccindents" EntitySet="RoadAccindents" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GosAutoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -709,10 +710,10 @@
           <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="CountOfVictims" Type="Int32" Nullable="false" />
+          <Property Name="imgSchema" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="CarsAccindent" Relationship="Self.FK_CarsAccindent_RoadAccindents" FromRole="RoadAccindents" ToRole="CarsAccindent" />
           <NavigationProperty Name="Classifications" Relationship="Self.FK_RoadAccindents_Classifications" FromRole="RoadAccindents" ToRole="Classifications" />
           <NavigationProperty Name="driversAccindet" Relationship="Self.FK_driversAccindet_RoadAccindents" FromRole="RoadAccindents" ToRole="driversAccindet" />
-          <Property Name="imgSchema" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Statuses">
           <Key>
@@ -1248,12 +1249,12 @@
           <EntitySetMapping Name="RoadAccindents">
             <EntityTypeMapping TypeName="GosAutoModel.RoadAccindents">
               <MappingFragment StoreEntitySet="RoadAccindents">
-                <ScalarProperty Name="imgSchema" ColumnName="imgSchema" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="classId" ColumnName="classId" />
                 <ScalarProperty Name="address" ColumnName="address" />
                 <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="CountOfVictims" ColumnName="CountOfVictims" />
+                <ScalarProperty Name="imgSchema" ColumnName="imgSchema" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
