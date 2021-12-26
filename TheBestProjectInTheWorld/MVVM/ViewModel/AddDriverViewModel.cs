@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 using TheBestProjectInTheWorld.Core;
 using TheBestProjectInTheWorld.MVVM.Model;
 
@@ -134,10 +137,15 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             }
         }
         public RelayCommand AddCommand { get; set; }
+        public RelayCommand LoadImgCommand { get; set; }
    
         public AddDriverViewModel()
         {
-        
+            LoadImgCommand = new RelayCommand(o =>
+            {
+                string fileName = LoadImage(AutoContext.GetContext().Drivers.Count() + 1 + ".png");
+                Photo = imgPath + fileName;
+            });
 
             AddCommand = new RelayCommand(o =>
             {
@@ -183,6 +191,26 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
             {
                 Message = DataWorker.EditDriver(driver, Name, MiddleName, PassportSerial, PassportNum, PostCode, Address, Phone, Email);
             });
+        }
+
+        private string LoadImage(string name)
+        {
+            
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.png)|*.png";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                BitmapImage image = new BitmapImage(new Uri(openFileDialog.FileName));
+                BitmapEncoder encoder = new PngBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create(image));
+
+                using (FileStream file = new FileStream(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + 
+                    imgPath + name, FileMode.CreateNew))
+                {
+                    encoder.Save(file);
+                }
+            }
+            return name;
         }
     }
 }

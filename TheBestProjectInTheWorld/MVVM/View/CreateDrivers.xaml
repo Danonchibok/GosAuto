@@ -130,6 +130,8 @@
                     Foreground="Black"
                     Command="{Binding AddCommand}"
                      Style="{StaticResource 2buttons}"/>
+            <Button Content="img load"
+                    Command="{Binding LoadImgCommand}"></Button>
         </StackPanel>
     </StackPanel>
 </UserControl>
