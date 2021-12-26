@@ -36,7 +36,7 @@ namespace TheBestProjectInTheWorld.MVVM.ViewModel
                 AddDriverEvent(this, new EventArgs());
             });
 
-            Drivers = new ObservableCollection<Drivers>(AutoContext.GetContext().Drivers.ToList());
+            //Drivers = new ObservableCollection<Drivers>(AutoContext.GetContext().Drivers.ToList());
         }
 
         private void ChangeDriver(Drivers driver)

@@ -16,35 +16,95 @@
         <Border Height="550"
                 Background="#1B2B4E"
                 CornerRadius="25">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                  
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition Width="360"/>
-                    <ColumnDefinition Width="20"/>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition Width="20"/>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical" Margin="0 0 15 0">
+
+                        <TextBlock Text="Дата создания" 
+                                   Foreground="White"
+                                   FontSize="16" 
+                                   Margin="0 0 0 10"
+                                   HorizontalAlignment="Center"/>
+                        <TextBox Width="130"
+                                 Height="30" 
+                                 Style="{StaticResource LincenceView}"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" >
+                        <TextBlock Text="Дата создания" 
+                                   Foreground="White"
+                                   FontSize="16" 
+                                   Margin="0 0 0 10"
+                                   HorizontalAlignment="Center"/>
+                        <TextBox Width="130"
+                                 Height="30"
+                                 Style="{StaticResource LincenceView}"/>
+
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical" Margin="0 15 15 0" >
+
+                        <TextBlock Text="Категория" 
+                                   Foreground="White"
+                                   FontSize="16" 
+                                   Margin="0 0 0 10"
+                                   HorizontalAlignment="Center"/>
+                        <TextBox Width="130"
+                                 Height="30"
+                                 Style="{StaticResource LincenceView}"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="0 15 0 0">
+                        <TextBlock Text="Статус" 
+                                   Foreground="White"
+                                   FontSize="16" 
+                                   Margin="0 0 0 10"
+                                   HorizontalAlignment="Center"/>
+                        <ComboBox Width="130"
+                                  Height="30"
+                                  Style="{StaticResource ComboBoxLicence}">
+                            <TextBlock Text="Активен"/>
+                            <TextBlock Text="Утратил силу"/>
+                            <TextBlock Text="Приостановлен"/>
+                            <TextBlock Text="Изъят"/>
+                        </ComboBox>
+
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"  Margin="0 15 0 0" >
+                    <StackPanel Orientation="Vertical" Margin="0 0 15 0">
+
+                        <TextBlock Text="Серия" 
+                                   Foreground="White"
+                                   FontSize="16" 
+                                   Margin="0 0 0 10"
+                                   HorizontalAlignment="Center"/>
+                        <TextBox Width="130"
+                                 Height="30"
+                                 Style="{StaticResource LincenceView}"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" >
+                        <TextBlock Text="Номер" 
+                                   Foreground="White"
+                                   FontSize="16" 
+                                   Margin="0 0 0 10"
+                                   HorizontalAlignment="Center"/>
+                        <TextBox Width="130"
+                                 Height="30"
+                                 Style="{StaticResource LincenceView}"/>
+
+                    </StackPanel>
+
+                </StackPanel>
                
-                
-            </Grid>
+            </StackPanel>
+            
         </Border>
 
         <StackPanel Orientation="Horizontal"
