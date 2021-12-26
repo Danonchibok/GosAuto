@@ -27,11 +27,12 @@
                       ItemsSource="{Binding Drivers}"
                       SelectedItem="{Binding CurrentDriver}"
                           Background="Transparent"
-                          Width="910"
-                          BorderThickness="1">
+                          Width="920"
+                      BorderThickness="0"
+                         >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Width="895"  HorizontalAlignment="Center" >
+                        <StackPanel Orientation="Horizontal" Width="800"  HorizontalAlignment="Center" >
                          
                             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
 

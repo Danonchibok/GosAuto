@@ -27,7 +27,7 @@
                       FontSize="17"
                           Background="Transparent"
                           Width="910"
-                          BorderThickness="1"
+                          BorderThickness="0"
                       ItemsSource="{Binding Cars}"
                       SelectedItem="{Binding CurrentCar}">
                 <ListView.ItemTemplate>
