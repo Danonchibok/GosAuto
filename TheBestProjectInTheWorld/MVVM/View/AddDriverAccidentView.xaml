@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="TheBestProjectInTheWorld.MVVM.View.AddDriverAccidentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TheBestProjectInTheWorld.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="900">
+
+    <StackPanel>
+
+        <TextBox Height="30"
+                     Style="{StaticResource LincenceView}"/>
+        <ListView Margin="0 10 0 0"
+                      Height="100"
+                      Background="Transparent"
+                      BorderThickness="1"
+                      />
+        <Button Content="Добавить участника"
+                    Foreground="Black"
+                    Background="White"
+                    Margin="0 10 0 0"
+                    Height="35"
+                    Style="{StaticResource dtpBut}"/>
+    </StackPanel>
+</UserControl>
